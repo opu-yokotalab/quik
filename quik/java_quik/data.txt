@@ -1,0 +1,414 @@
+reading aglets property from file:////project/quik/.aglets/aglets.properties
+reading atp property from file:////project/quik/.aglets/atp.properties
+[Warning: The hostname seems not having domain name.
+ Please try -resolve option to resolve your hostname
+ or use -domain option to manually specify the domain name.]
+---------------------------------------------
+ Licensed Materials - Property of IBM
+ 46H7394 (c) Copyright IBM Corp.
+ 1996, 1998 All rights reserved.
+ US Government Users Restricted Rights - 
+ Use, duplication or disclosure restricted
+ by GSA ADP Schedule Contract with IBM Corp.
+---------------------------------------------
+[IBM Aglets Class Library 1.03 Revision: 8]
+[4 Dec 2000 08:10:07 GMT] IBM Agent Daemon started with atp:9001 32 agentSystem:aglets
+sapphire - - [4 Dec 2000 08:10:12 GMT] "DISPATCH atp://sapphire:9001/ ATP/0.1" 100 -
+Program
+parent.uiServer:java_quik.gui.UI_Server[frame0,0,0,600x500,layout=java.awt.BorderLayout,resizable,title=QUIK Server]
+I'm back!!
+ATOM = scene1
+Node = scene1
+Leaf = background
+Leaf.seq = ももたろう
+Leaf.ap = background(outbg)
+Media.ap = background
+sapphire - - [4 Dec 2000 08:10:13 GMT] "DISPATCH atp://sapphire:9001/ ATP/0.1" 100 -
+Flag:4
+Start
+#background@outbg
+ActionPointer##########
+(java_quik.send_om.OM_ActionPointer@1fa51db0)
+loop        :0
+scenario_num:0.0
+play_time   :0
+synchro_time:0
+media       :java_quik.send_om.OM_Media@1fa51daf
+action      :java_quik.send_om.OM_Action@1fa51dae
+next        :null
+##########
+Media----------
+(java_quik.send_om.OM_Media@1fa51daf)
+media_type:3
+comment   :hogehoge2
+media_atom:background
+  OM_3D=====
+  url:http://haikei.vrml
+  =========
+ap        :java_quik.send_om.OM_ActionPointer@1fa51db0
+next      :null
+----------
+OM_Action//////////
+(java_quik.send_om.OM_Action@1fa51dae)
+action_type:1
+comment    :null
+atom       :outbg
+  Out+++++
+  Point:( 0.0, 0.0, 0.0)
+  font   :null
+  (R,G,B)=( 1.0, 1.0, 1.0)
+  volume :0.5
+  scale  :0.5
+  ++++++++++
+next       :null
+//////////
+sapphire - - [4 Dec 2000 08:10:14 GMT] "DISPATCH atp://sapphire:9001/ ATP/0.1" 100 -
+Flag:0
+#ももたろう@tojo1
+ActionPointer##########
+(java_quik.send_om.OM_ActionPointer@1fa529a8)
+loop        :0
+scenario_num:0.0
+play_time   :0
+synchro_time:0
+media       :java_quik.send_om.OM_Media@1fa529a7
+action      :java_quik.send_om.OM_Action@1fa529a6
+next        :null
+##########
+Media----------
+(java_quik.send_om.OM_Media@1fa529a7)
+media_type:1
+comment   :null
+media_atom:ももたろう
+  OM_Pictire=====
+  url  :http://momotaro.jpg
+  scake:0.5
+  =========
+ap        :java_quik.send_om.OM_ActionPointer@1fa529a8
+next      :null
+----------
+OM_Action//////////
+(java_quik.send_om.OM_Action@1fa529a6)
+action_type:1
+comment    :hogehoge3
+atom       :tojo1
+  Out+++++
+  Point:( 0.5, 1.0, 0.0)
+  font   :null
+  (R,G,B)=( 1.0, 1.0, 1.0)
+  volume :0.5
+  scale  :0.5
+  ++++++++++
+next       :null
+//////////
+sapphire - - [4 Dec 2000 08:10:16 GMT] "DISPATCH atp://sapphire:9001/ ATP/0.1" 100 -
+Flag:0
+#akaoni@tojo2
+ActionPointer##########
+(java_quik.send_om.OM_ActionPointer@1fa5320d)
+loop        :0
+scenario_num:0.0
+play_time   :0
+synchro_time:0
+media       :java_quik.send_om.OM_Media@1fa53214
+action      :java_quik.send_om.OM_Action@1fa5320b
+next        :null
+##########
+Media----------
+(java_quik.send_om.OM_Media@1fa53214)
+media_type:1
+comment   :null
+media_atom:akaoni
+  OM_Pictire=====
+  url  :http://akaoni.jpg
+  scake:0.5
+  =========
+ap        :java_quik.send_om.OM_ActionPointer@1fa5320d
+next      :null
+----------
+OM_Action//////////
+(java_quik.send_om.OM_Action@1fa5320b)
+action_type:1
+comment    :null
+atom       :tojo2
+  Out+++++
+  Point:( 0.5, 1.0, 0.0)
+  font   :null
+  (R,G,B)=( 1.0, 1.0, 1.0)
+  volume :0.5
+  scale  :0.5
+  ++++++++++
+next       :null
+//////////
+sapphire - - [4 Dec 2000 08:10:17 GMT] "DISPATCH atp://sapphire:9001/ ATP/0.1" 100 -
+Flag:0
+#monkey@tojo3
+ActionPointer##########
+(java_quik.send_om.OM_ActionPointer@1fa53a5b)
+loop        :0
+scenario_num:0.0
+play_time   :30
+synchro_time:20
+media       :java_quik.send_om.OM_Media@1fa53a5e
+action      :java_quik.send_om.OM_Action@1fa53a59
+next        :null
+##########
+Media----------
+(java_quik.send_om.OM_Media@1fa53a5e)
+media_type:2
+comment   :null
+media_atom:monkey
+  OM_Pictire=====
+  url  :http://monkey.mov
+  scake:0.5
+  =========
+ap        :java_quik.send_om.OM_ActionPointer@1fa53a5b
+next      :null
+----------
+OM_Action//////////
+(java_quik.send_om.OM_Action@1fa53a59)
+action_type:1
+comment    :null
+atom       :tojo3
+  Out+++++
+  Point:( 0.3, 1.0, 0.5)
+  font   :null
+  (R,G,B)=( 1.0, 1.0, 1.0)
+  volume :0.5
+  scale  :0.5
+  ++++++++++
+next       :null
+//////////
+sapphire - - [4 Dec 2000 08:10:18 GMT] "DISPATCH atp://sapphire:9001/ ATP/0.1" 100 -
+Flag:0
+#smile@outbg
+ActionPointer##########
+(java_quik.send_om.OM_ActionPointer@1fa53c6a)
+loop        :0
+scenario_num:0.0
+play_time   :0
+synchro_time:0
+media       :java_quik.send_om.OM_Media@1fa54253
+action      :java_quik.send_om.OM_Action@1fa5427d
+next        :null
+##########
+Media----------
+(java_quik.send_om.OM_Media@1fa54253)
+media_type:6
+comment   :null
+media_atom:smile
+  OM_OtherM=====
+  url        :http://gaibu.smile
+  export_type:1
+  scale(x, y)=( 1, 2)
+  =========
+ap        :java_quik.send_om.OM_ActionPointer@1fa53c6a
+next      :null
+----------
+OM_Action//////////
+(java_quik.send_om.OM_Action@1fa5427d)
+action_type:1
+comment    :null
+atom       :outbg
+  Out+++++
+  Point:( 0.0, 0.0, 0.0)
+  font   :null
+  (R,G,B)=( 1.0, 1.0, 1.0)
+  volume :0.5
+  scale  :0.5
+  ++++++++++
+next       :null
+//////////
+sapphire - - [4 Dec 2000 08:10:20 GMT] "DISPATCH atp://sapphire:9001/ ATP/0.1" 100 -
+Flag:0
+#ももたろう@moveleft
+ActionPointer##########
+(java_quik.send_om.OM_ActionPointer@1fa54488)
+loop        :0
+scenario_num:0.0
+play_time   :0
+synchro_time:0
+media       :java_quik.send_om.OM_Media@1fa54aee
+action      :java_quik.send_om.OM_Action@1fa54aec
+next        :null
+##########
+Media----------
+(java_quik.send_om.OM_Media@1fa54aee)
+media_type:1
+comment   :null
+media_atom:ももたろう
+  OM_Pictire=====
+  url  :http://momotaro.jpg
+  scake:0.5
+  =========
+ap        :java_quik.send_om.OM_ActionPointer@1fa54488
+next      :null
+----------
+OM_Action//////////
+(java_quik.send_om.OM_Action@1fa54aec)
+action_type:2
+comment    :null
+atom       :moveleft
+  Move+++++
+  Point:( 0.4, 1.0, 0.0)->( 0.2, 1.0, 0.0)->( 0.0, 1.5, 0.0)->( 0.3, 1.0, 0.0)
+  ++++++++++
+next       :null
+//////////
+sapphire - - [4 Dec 2000 08:10:21 GMT] "DISPATCH atp://sapphire:9001/ ATP/0.1" 100 -
+Flag:0
+#sentence1@teroppu
+ActionPointer##########
+(java_quik.send_om.OM_ActionPointer@1fa54d30)
+loop        :0
+scenario_num:0.0
+play_time   :0
+synchro_time:0
+media       :java_quik.send_om.OM_Media@1fa54d2f
+action      :java_quik.send_om.OM_Action@1fa54d2e
+next        :null
+##########
+Media----------
+(java_quik.send_om.OM_Media@1fa54d2f)
+media_type:4
+comment   :null
+media_atom:sentence1
+  OM_Text=====
+  url    :http://setumei.txt
+  font   :null
+  scale  :0.5
+  (R,G,B)=( 1.0, 1.0, 1.0)
+  =========
+ap        :java_quik.send_om.OM_ActionPointer@1fa54d30
+next      :null
+----------
+OM_Action//////////
+(java_quik.send_om.OM_Action@1fa54d2e)
+action_type:1
+comment    :null
+atom       :teroppu
+  Out+++++
+  Point:( 0.0, 0.0, 0.0)
+  font   :italic
+  (R,G,B)=( 0.0, 0.0, 0.0)
+  volume :0.5
+  scale  :0.5
+  ++++++++++
+next       :null
+//////////
+sapphire - - [4 Dec 2000 08:10:23 GMT] "DISPATCH atp://sapphire:9001/ ATP/0.1" 100 -
+Flag:0
+#sentence2@talk
+ActionPointer##########
+(java_quik.send_om.OM_ActionPointer@1fa55c2f)
+loop        :0
+scenario_num:0.0
+play_time   :0
+synchro_time:0
+media       :java_quik.send_om.OM_Media@1fa55c32
+action      :java_quik.send_om.OM_Action@1fa55c2d
+next        :null
+##########
+Media----------
+(java_quik.send_om.OM_Media@1fa55c32)
+media_type:4
+comment   :null
+media_atom:sentence2
+  OM_Text=====
+  url    :http://nanori.txt
+  font   :null
+  scale  :0.5
+  (R,G,B)=( 1.0, 1.0, 1.0)
+  =========
+ap        :java_quik.send_om.OM_ActionPointer@1fa55c2f
+next      :null
+----------
+OM_Action//////////
+(java_quik.send_om.OM_Action@1fa55c2d)
+action_type:3
+comment    :null
+atom       :talk
+  Speak+++++
+  font      :male
+  intonation:0.5
+  pitch     :0.5
+  volume    :2.0
+  speed     :0.0
+  ++++++++++
+next       :null
+//////////
+sapphire - - [4 Dec 2000 08:10:24 GMT] "DISPATCH atp://sapphire:9001/ ATP/0.1" 100 -
+Flag:0
+#akaoni@runaway
+ActionPointer##########
+(java_quik.send_om.OM_ActionPointer@1fa55e43)
+loop        :0
+scenario_num:0.0
+play_time   :0
+synchro_time:0
+media       :java_quik.send_om.OM_Media@1fa564b8
+action      :java_quik.send_om.OM_Action@1fa55e41
+next        :null
+##########
+Media----------
+(java_quik.send_om.OM_Media@1fa564b8)
+media_type:1
+comment   :null
+media_atom:akaoni
+  OM_Pictire=====
+  url  :http://akaoni.jpg
+  scake:0.5
+  =========
+ap        :java_quik.send_om.OM_ActionPointer@1fa55e43
+next      :null
+----------
+OM_Action//////////
+(java_quik.send_om.OM_Action@1fa55e41)
+action_type:5
+comment    :null
+atom       :runaway
+  Del+++++
+  ++++++++++
+next       :null
+//////////
+sapphire - - [4 Dec 2000 08:10:25 GMT] "DISPATCH atp://sapphire:9001/ ATP/0.1" 100 -
+Flag:0
+#sound@music
+ActionPointer##########
+(java_quik.send_om.OM_ActionPointer@1fa5669b)
+loop        :0
+scenario_num:0.0
+play_time   :0
+synchro_time:0
+media       :java_quik.send_om.OM_Media@1fa5669a
+action      :java_quik.send_om.OM_Action@1fa56699
+next        :null
+##########
+Media----------
+(java_quik.send_om.OM_Media@1fa5669a)
+media_type:5
+comment   :null
+media_atom:sound
+  OM_Sound=====
+  url   :http://taijo.wav
+  volume:0.5
+  =========
+ap        :java_quik.send_om.OM_ActionPointer@1fa5669b
+next      :null
+----------
+OM_Action//////////
+(java_quik.send_om.OM_Action@1fa56699)
+action_type:1
+comment    :null
+atom       :music
+  Out+++++
+  Point:( 0.0, 0.0, 0.0)
+  font   :null
+  (R,G,B)=( 1.0, 1.0, 1.0)
+  volume :1.0
+  scale  :0.5
+  ++++++++++
+next       :null
+//////////
+sapphire - - [4 Dec 2000 08:10:27 GMT] "DISPATCH atp://sapphire:9001/ ATP/0.1" 100 -
+Flag:0
+Normal Error!

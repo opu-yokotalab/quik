@@ -1,0 +1,29 @@
+&program;;
+&rule;;
+#main <= #scene1; #scene2;;
+#scene1/[comment=hogehoge] <= #background(@outbg);
+         #ももたろう(@tojo1),
+         #akaoni(@tojo2);
+         #monkey(@tojo3)/[play_time=30,synchro_time=20];;
+#scene2 <= #sentence1(@teroppu);#sentence2(@talk); #scene3;;
+#scene3 <= #akaoni(@runaway);#sound(@music);;
+#background/[type=3, url=http://haikei.vrml, comment = hogehoge2];;
+#ももたろう/[type=1, url=http://momotaro.jpg];;
+#akaoni/[type=1, url=http://akaoni.jpg];;
+#monkey/[type=2, url=http://monkey.mov];;
+#sentence1/[type=4, url=http://setumei.txt];;
+#sentence2/[type=4, url=http://nanori.txt];;
+#sound/[type=5, url=http://taijo.wav];;
+@outbg/[action_type=1];;
+@tojo1/[action_type=1, point={(0.5, 1.0, 0.0)}, comment=hogehoge3];;
+@tojo2/[action_type=1, point={(0.5, 1.0, 0.0)}];;
+@tojo3/[action_type=1, point={(0.3,1.0,0.5)}];;
+@moveleft/[action_type=2, point={(0.4, 1.0, 0.0), (0.2, 1.0, 0.0), (0.0, 1.5, 0.0), (0.3, 1.0, 0.0)}];;
+@teroppu/[action_type=1, font=italic, color={r=0.0,g=0.0,b=0.0}];;
+@talk/[action_type=3, font=male, volume=2.0];;
+@runaway/[action_type=5];;
+@music/[action_type=1, volume=1.0];;
+&end.
+&query
+&debug
+

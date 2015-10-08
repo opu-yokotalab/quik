@@ -1,0 +1,44 @@
+&program;;
+&rule;;
+#main<=stream(#scene);;
+#scene1/[comment=hogehoge] <= #background1(@outbg);
+	#サウンド1(@再生1);
+	#オブジェクト(@tojo1)/[play_time=5];
+	#いさせり(@tojo2)/[play_time=5];
+	#オブジェクト(@移動1)/[play_time=10];
+	#サウンド2(@再生2);
+	#いさせり(@移動2)/[play_time=10];
+	#挨拶(@発話)/[play_time=6];
+	#いさせり(@消去);
+	#オブジェクト(@消去);;
+#scene2 <= #西門(@tojo1);
+	#いさせり(@tojo2)/[play_time=5];
+	#温羅(@登場3),
+	#紹介(@発話)/[play_time=6];
+	#いさせり(@消去);;
+#background1/[type=3, 
+url=file:C:/jdk122/Prog/QUIK/java_quik/viewer/Stage1.class,
+comment = hogehoge2];;
+#西門/[type=3, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/3D/nisi5.wrl];;
+#いさせり/[type=1, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/pic/isaseri.gif];;
+#温羅/[type=1, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/pic/ura.gif];;
+#挨拶/[type=4, str=こんな豊かな国づくりをしている温羅のことを、ぜひお教えしたい。];;
+#紹介/[type=4, str=これは西門の復元3Dです。];;
+#オブジェクト/[type=3, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/3D/SimpleSphere.class];;
+#サウンド1/[type=5, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/sound/walk.wav];;
+#サウンド2/[type=5, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/sound/drip.wav];;
+@outbg/[action_type=1];;
+@tojo1/[action_type=1, point={(0.0, 10.0, 0.0)}, comment=hogehoge3];;
+@tojo2/[action_type=1, point={(2.0, 0.0, 10.0)}, scale=8.0];;
+@登場3/[action_type=1, point={(0.0, 11.5, 1.0)}, scale=8.0];;
+@登場4/[action_type=1, point={(3.0, 11.5, 1.0)}, scale=4.0];;
+@発話/[action_type=3, pitch=3.0, font=male, speed=3.0];;
+@消去/[action_type=5];;
+@出力/[action_type=1];;
+@再生1/[action_type=1, volume=1.0];;
+@再生2/[action_type=1, volume=2.0];;
+@移動1/[action_type=2, point={(0.0,0.0,0.0),(0.5,0.5,0.0),(0.0,1.0,0.5),(-0.5,1.5,0.0),(0.0,2.0,-0.5),(0.5,3.0,0.0),(0.0,3.5,0.5),(-0.5,4.0,0.0),(0.0,4.5,-0.5),(0.5,5.0,0.0),(0.0,5.5,0.5),(-0.5,6.0,0.0),(0.0,6.5,-0.5),(0.5,7.0,0.0),(0.0,7.5,0.5),(-0.5,8.0,0.0),(0.0,8.5,-0.5)}];;
+@移動2/[action_type=2, point={(2.0,0.0,11.0),(2.0,0.0,15.0),(2.0,0.0,20.0)}];;
+&end.
+
+

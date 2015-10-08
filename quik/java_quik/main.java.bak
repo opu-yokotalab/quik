@@ -1,0 +1,68 @@
+package java_quik;
+//import java_quik.commgr.*;
+//import java_quik.gui.*;
+import java.awt.*;
+//import java_cup.runtime.*;
+
+import java.io.*;
+
+public class main { 
+ BufferedReader bfin;
+  public static void main(String args[]) throws ParseException,IOException 
+  {
+    String str = "mt.quik";
+    int b;
+   
+    System.out.println("Please press return to begin");
+    b=System.in.read();
+    System.out.println(b);
+    Extern_h new_extern = new Extern_h();
+    //OM_MediaPrint new_pri = new OM_MediaPrint(new_extern);
+   
+    // menu m;
+    //m = new menu();
+    //m.show();
+   BufferedReader bfin;
+    
+    try{
+      bfin = new BufferedReader(new FileReader(str));
+      System.out.println("---------parser-------------");
+      quik_parser parser = new quik_parser(bfin);
+      parser.Input();  
+    } catch(FileNotFoundException e){
+      System.out.println("FileNotFoundException:" + e);
+    } catch(IOException e){
+      System.out.println("IOException:" + e);
+    }
+    
+    
+
+  }
+  
+  public void parse(String str) throws ParseException{ 
+    try{
+      bfin = new BufferedReader(new FileReader(str));
+      System.out.println("---------parser-------------");
+      quik_parser parser = new quik_parser(bfin);
+      parser.Input();  
+    } catch(FileNotFoundException e){
+      System.out.println("FileNotFoundException:" + e);
+    } catch(IOException e){
+      System.out.println("IOException:" + e);
+    }
+  
+  
+
+
+}
+
+
+
+
+
+
+}
+
+ 
+
+

@@ -1,0 +1,14 @@
+&program(m2);;
+&mediator;;
+m2 &inheri m6;;
+m2 &refer m4;;
+&ontology;;
+m2:o2 == m6:o6;;
+&subsumption;;
+o10 =< o11;;
+o11 =< o12;;
+&rule;;
+o5;;
+o6/[l7->e];;
+o7|{l8==f};;
+&end.

@@ -1,0 +1,29 @@
+<quik> ::= <program>
+
+ <program> ::= "&program" ";" <定義> "&end" "."
+
+ <定義> ::= "&rule" ";" <rulelist>
+
+ <rulelist> ::= <scenelist> <leaf_media_action_list>
+
+ <scenelist> ::= <body> "<=" <STREAM> "(" <bodylist> ")" ";"
+                |<bodylist> ";"
+
+ <leaf_media_action_list> ::= ( <body> ( "<=" <bodylist> )? ";;")+ 
+
+ <bodylist> ::= <body> ( ";" | "," )? ( <bodylist>)?
+      
+ <contentslist> ::= <contents> ( "," <contentslist> )?
+
+ <body> ::= "#" ATOM ( "(" "@" ATOM ")" )? ("/" "[" contentslist() "]")?
+
+ <contents> ::= ATOM "=" ATOM
+            | ATOM "="   "{" (<pointlist>  "}"
+            | ATOM "="   "{" "r" "=" DIGIT "," "g" "="  DIGIT "," "b" "=" DIGIT  ) "}"  
+ 
+ <pointlist> ::= "(" DIGIT "," DIGIT "," DIGIT ")" ("," <pointlist>)?
+
+
+
+
+

@@ -1,0 +1,5260 @@
+%!
+%%BoundingBox: (atend)
+%%Title: data_struct
+%%CreationDate: Thu Nov  2 19:02:05 2000
+%%Creator: Tgif-3.0J.18 by William Chia-Wei Cheng (william@cs.UCLA.edu)
+%%Orientation: Portrait
+%%Pages: 5
+%%DocumentFonts: (atend)
+%%EndComments
+%%BeginProlog
+
+/tgifdict 8 dict def
+tgifdict begin
+
+%%Title: jisfont.ps
+%%Creator: shin@jn1jdz.ymt.prug.or.jp
+%%CreationDate: 1997-7-20
+%%EndComments
+
+% based on eucfont.ps (1991-2-27) by shikida@cs.titech.ac.jp, ueno@cs.titech.ac.jp
+
+% <newfont> <asciifont> <kanjifont> jisfont
+/jisfont {
+    12 dict begin
+	dup type /nametype eq { findfont } if
+	dup /WMode known {
+	    dup /WMode get /WMode exch def
+	    WMode 1 eq {
+		[0.0 1.0 -1.0 0.0 0.0 0.30] makefont
+	    } if
+	} if
+	/kanjifont exch definefont
+	exch
+
+	dup type /nametype eq { findfont } if
+	exch
+
+	/FDepVector [ 4 2 roll ] def
+	/FontType 0 def
+	/FMapType 3 def
+	/FontMatrix matrix def
+	/Encoding [ 0 1 ] def
+	/FontBBox {0 0 0 0} def
+	dup /FontName exch def
+	currentdict
+    end
+    definefont pop
+} def
+
+/tgifarrowtipdict 8 dict def
+tgifarrowtipdict /mtrx matrix put
+
+/tgifarrowtip
+ { tgifarrowtipdict begin
+      /dy exch def
+      /dx exch def
+      /h exch def
+      /w exch def
+      /y exch def
+      /x exch def
+      /savematrix mtrx currentmatrix def
+      x y translate
+      dy dx atan rotate
+      0 0 moveto
+      w neg h lineto
+      w neg h neg lineto
+      savematrix setmatrix
+   end
+ } def
+
+end
+
+%%EndProlog
+%%Page: 1 1
+
+%%PageBoundingBox: 34 323 451 816
+tgifdict begin
+/tgifsavedpage save def
+
+1 setmiterlimit
+1 setlinewidth
+
+0 setgray
+
+72 0 mul 72 11.70 mul translate
+72 128 div 100.000 mul 100 div dup neg scale
+
+gsave
+
+/tgiforigctm matrix currentmatrix def
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H /Courier /Ryumin-Light-H jisfont
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      72 62 moveto (2000\377\001\107\057\105\131\377\000QUIK\377\001\044\116\071\075\112\070\116\143\377\000 10/27) show
+   grestore
+
+% BOX
+0 setgray
+gsave
+   10 setmiterlimit
+   gsave
+      newpath
+         64 84 moveto 800 84 lineto 800 740 lineto 64 740 lineto
+      closepath
+      stroke
+   grestore
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      88 109 moveto (&program\(m1\);;) show
+      88 125 moveto (&mediator;;) show
+      88 141 moveto (&ontology;;) show
+      88 157 moveto (&subsumption;;) show
+      88 173 moveto (&rule;;) show
+      88 189 moveto (/*scene-list*/) show
+      88 205 moveto ( #main <= stream\(#scene\);;) show
+      88 221 moveto ( or) show
+      88 237 moveto ( #main <= #scene1,#scene2;#scene3...;;) show
+      88 253 moveto () show
+      88 269 moveto (/*Leaf-list*/ ) show
+      88 285 moveto ( #scene1/[comment=hogehoge] ) show
+      88 301 moveto (         <= #background\(@outbg\); #momotaro\(@tojo1\),) show
+      88 317 moveto (            #akaoni\(@tojo2\); ) show
+      88 333 moveto (            #monkey\(@tojo3\)/[play_time=30, synchro_time=20, comment=gehogeho];) show
+      88 349 moveto (            #momotaro\(@moveleft\);) show
+      88 365 moveto (            #sentence1\(@teroppu\); #sentence2\(@talk\);) show
+      88 381 moveto (            #akaoni\(@runaway\); #sound\(@music\);;) show
+      88 397 moveto () show
+      88 413 moveto (/*media-list*/) show
+      88 429 moveto ( #backgound/[type=3, url=http://.../haikei.vrml, comment=hogehoge2];;) show
+      88 445 moveto ( #momotaro/[type=1, url=http://.../momotaro.jpg];;) show
+      88 461 moveto ( #akaoni/[type=1, url=http://.../akaoni.jpg];;) show
+      88 477 moveto ( #monkey/[type=2, url=http://.../monkey.mov];;) show
+      88 493 moveto ( #sentence1/[type=4, url=http://.../setumei.txt];;) show
+      88 509 moveto ( #sentence2/[type=4, url=http://.../nanori.txt];;) show
+      88 525 moveto ( #sound/[type=5, url=http://.../taijo.wav];;) show
+      88 541 moveto () show
+      88 557 moveto (/*action-list*/ ) show
+      88 573 moveto ( @outbg/[action_type=1];;) show
+      88 589 moveto ( @tojo1/[action_type=1, point={\(0.5, 1.0, 0.0\)}, comment=hogehoge3];;) show
+      88 605 moveto ( @tojo2/[action_type=1, point={\(-0.5, 1.0, 0.0\)}];;) show
+      88 621 moveto ( @tojo3/[action_type=1, point={\(0.3, 1.0, 0.5\)}];;) show
+      88 637 moveto ( @moveleft/[action_type=2, point={\(0.4, 1.0, 0.0\),) show
+      88 653 moveto (     \(0.2, 1.0, 0.0\), \(0.0, 1.5, 0.0\), \(-0.3, 1.0, 0.0\)];;) show
+      88 669 moveto ( @teroppu/[action_type=1, font=italic, color={r=0.0, g=0.0, b=0.0}];;) show
+      88 685 moveto ( @talk/[action_type=3, font=male, volume=2.0];;) show
+      88 701 moveto ( @runaway/[action_type=5];;) show
+      88 717 moveto ( @music/[action_type=1, volume=1.0];;) show
+      88 733 moveto (&end.) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      72 797 moveto (\377\001\045\141\045\107\045\043\045\042\044\116\045\077\045\044\045\127) show
+      72 813 moveto () show
+      72 829 moveto (1. \377\001\100\105\073\137\062\150) show
+      72 845 moveto (2. \377\001\106\060\062\150) show
+      72 861 moveto (3. 3D\377\001\045\052\045\126\045\070\045\047\045\057\045\110) show
+      72 877 moveto (4. \377\001\045\106\045\055\045\071\045\110) show
+      72 893 moveto (5. \377\001\045\065\045\046\045\163\045\111) show
+      72 909 moveto (6. \377\001\063\060\111\164\045\141\045\107\045\043\045\042) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      256 809 moveto (\377\001\045\042\045\057\045\067\045\147\045\163\044\116\045\077\045\044\045\127) show
+      256 825 moveto () show
+      256 841 moveto (1. out) show
+      256 857 moveto (2. move) show
+      256 873 moveto (3. speak) show
+      256 889 moveto (4. light) show
+      256 905 moveto (5. del) show
+   grestore
+
+% BOX
+0 setgray
+gsave
+   10 setmiterlimit
+   gsave
+      newpath
+         64 808 moveto 220 808 lineto 220 920 lineto 64 920 lineto
+      closepath
+      stroke
+   grestore
+grestore
+
+% BOX
+0 setgray
+gsave
+   10 setmiterlimit
+   gsave
+      newpath
+         248 820 moveto 392 820 lineto 392 916 lineto 248 916 lineto
+      closepath
+      stroke
+   grestore
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      436 829 moveto (\377\001\063\060\111\164\045\141\045\107\045\043\045\042\044\116\045\077\045\044\045\127) show
+      436 845 moveto () show
+      436 861 moveto (1. SMIL) show
+      436 877 moveto (2. TVML) show
+      436 893 moveto (3. JavaProg.) show
+      436 909 moveto (4. ??) show
+   grestore
+
+% BOX
+0 setgray
+gsave
+   10 setmiterlimit
+   gsave
+      newpath
+         424 836 moveto 572 836 lineto 572 916 lineto 424 916 lineto
+      closepath
+      stroke
+   grestore
+grestore
+
+grestore
+tgifsavedpage restore
+end
+showpage
+
+%%Page: 2 2
+
+%%PageBoundingBox: 18 190 570 821
+tgifdict begin
+/tgifsavedpage save def
+
+1 setmiterlimit
+1 setlinewidth
+
+0 setgray
+
+72 0 mul 72 11.70 mul translate
+72 128 div 100.000 mul 100 div dup neg scale
+
+gsave
+
+/tgiforigctm matrix currentmatrix def
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H /Courier /Ryumin-Light-H jisfont
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      384 922 moveto (OM_Speak) show
+      384 939 moveto ( String   font) show
+      384 956 moveto ( float    intonation) show
+      384 973 moveto ( float    pitch) show
+      384 990 moveto ( float    volume) show
+      384 1007 moveto ( float    speed) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      36 858 moveto (OM_Text) show
+      36 875 moveto ( String url) show
+      36 892 moveto ( String font) show
+      36 909 moveto ( String str) show
+      36 926 moveto ( float  scale) show
+      36 943 moveto ( float  r) show
+      36 960 moveto ( float  g) show
+      36 977 moveto ( float  b) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      36 762 moveto (OM_3D) show
+      36 779 moveto ( String   url) show
+      36 796 moveto ( String   rotation) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      36 594 moveto (OM_Picture) show
+      36 611 moveto ( String   url) show
+      36 628 moveto ( float    scale) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      36 596 moveto
+      36 640 lineto
+      192 640 lineto
+      192 592 lineto
+      136 592 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      36 678 moveto (OM_Sound) show
+      36 695 moveto ( String url) show
+      36 712 moveto ( float  volume) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      36 680 moveto
+      36 720 lineto
+      184 720 lineto
+      184 672 lineto
+      136 672 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      384 924 moveto
+      384 1020 lineto
+      596 1020 lineto
+      596 920 lineto
+      472 920 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      36 860 moveto
+      36 984 lineto
+      172 984 lineto
+      172 852 lineto
+      108 852 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      36 764 moveto
+      36 808 lineto
+      224 808 lineto
+      224 756 lineto
+      132 756 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      384 1082 moveto (OM_Point) show
+      384 1099 moveto ( float    point_x) show
+      384 1116 moveto ( float    point_y) show
+      384 1133 moveto ( float    point_z) show
+      384 1150 moveto ( OM_Point next) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      384 1084 moveto
+      384 1156 lineto
+      560 1156 lineto
+      560 1076 lineto
+      464 1076 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      36 342 moveto (OM_Media) show
+      36 359 moveto ( int               media_type) show
+      36 376 moveto ( float             media_time) show
+      36 393 moveto ( String            comment) show
+      36 410 moveto ( OM_Atom           media_atom) show
+      36 427 moveto ( OM_Picture        picture) show
+      36 444 moveto ( OM_Sound          sound) show
+      36 461 moveto ( OM_Text           text) show
+      36 478 moveto ( OM_3D             three_d) show
+      36 495 moveto ( OM_OtherM         other_media) show
+      36 512 moveto ( OM_ActionPointer  ap) show
+      36 529 moveto ( OM_Media          next) show
+      36 546 moveto ( ) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      36 344 moveto
+      36 536 lineto
+      360 536 lineto
+      360 336 lineto
+      120 336 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      292 114 moveto (OM_Node) show
+      292 131 moveto ( OM_Atom head) show
+      292 148 moveto ( OM_Leaf body) show
+      292 165 moveto ( OM_Leaf parent) show
+      292 182 moveto ( OM_Node next) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      292 120 moveto
+      292 192 lineto
+      444 192 lineto
+      444 112 lineto
+      363 112 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      352 129 moveto () show
+      352 145 moveto () show
+      352 161 moveto () show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      504 114 moveto (OM_Leaf) show
+      504 131 moveto ( boolean          leaf_flag) show
+      504 148 moveto ( String           comment) show
+      504 165 moveto ( double           weight) show
+      504 182 moveto ( OM_Atom          media_atom) show
+      504 199 moveto ( OM_Atom          action_atom) show
+      504 216 moveto ( OM_ActionPointer ap) show
+      504 233 moveto ( OM_Leaf          seq_next) show
+      504 250 moveto ( OM_Leaf          nonorder) show
+      504 267 moveto ( OM_Node          node) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      504 116 moveto
+      504 276 lineto
+      800 276 lineto
+      800 112 lineto
+      576 112 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      36 114 moveto (OM_Atom) show
+      36 131 moveto ( String    name) show
+      36 148 moveto ( OM_Atom   nextbucket) show
+      36 165 moveto ( OM_Node   node) show
+      36 182 moveto ( OM_Media  media) show
+      36 199 moveto ( OM_Action action) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      36 117 moveto
+      36 210 lineto
+      252 210 lineto
+      252 112 lineto
+      108 112 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      384 342 moveto (OM_Action) show
+      384 359 moveto ( int        action_type) show
+      384 376 moveto ( String     comment) show
+      384 393 moveto ( OM_Atom    action_atom) show
+      384 410 moveto ( OM_Out     out) show
+      384 427 moveto ( OM_Del     del) show
+      384 444 moveto ( OM_Move    move) show
+      384 461 moveto ( OM_Speak   speak) show
+      384 478 moveto ( OM_Light   light) show
+      384 495 moveto ( OM_Action  next) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      384 344 moveto
+      384 504 lineto
+      624 504 lineto
+      624 336 lineto
+      480 336 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      36 1030 moveto (OM_OtherM) show
+      36 1047 moveto ( String  url) show
+      36 1064 moveto ( int     export_type) show
+      36 1081 moveto ( int     scale_x) show
+      36 1098 moveto ( int     scale_y) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      36 1032 moveto
+      36 1108 lineto
+      240 1108 lineto
+      240 1024 lineto
+      132 1024 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      384 710 moveto (OM_Out) show
+      384 727 moveto ( OM_Point point) show
+      384 744 moveto ( String   font) show
+      384 761 moveto ( float    r) show
+      384 778 moveto ( float    g) show
+      384 795 moveto ( float    b) show
+      384 812 moveto ( float    volume) show
+      384 829 moveto ( float    scale) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      384 712 moveto
+      384 868 lineto
+      556 868 lineto
+      556 704 lineto
+      448 704 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      400 857 moveto (\377\001\044\111\044\163\044\112\075\120\112\175\044\162\044\071\044\153\044\053\377\000?) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      696 594 moveto (OM_Del) show
+      696 611 moveto ( ) show
+      696 628 moveto ( ) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      696 596 moveto
+      696 636 lineto
+      868 636 lineto
+      868 588 lineto
+      760 588 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      708 621 moveto (\377\001\044\111\044\163\044\112\076\103\044\050\112\175\044\162\044\071\044\153\044\053\377\000?) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      696 698 moveto (OM_Light) show
+      696 715 moveto ( OM_Point point) show
+      696 732 moveto ( float    brightness) show
+      696 749 moveto ( float    steradian) show
+      696 766 moveto ( float    r) show
+      696 783 moveto ( float    g) show
+      696 800 moveto ( float    b) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      696 700 moveto
+      696 808 lineto
+      908 808 lineto
+      908 696 lineto
+      776 696 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      48 54 moveto (2000\377\001\107\057\105\131\377\000QUIK\377\001\044\116\045\107\041\074\045\077\071\075\102\044\377\000 2000\377\001\107\057\377\00011\377\001\067\156\377\0002\377\001\106\174\070\075\072\137) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      692 346 moveto (OM_ActionPointer) show
+      692 363 moveto ( int               loop) show
+      692 380 moveto ( String            comment) show
+      692 397 moveto ( float             scenario_num) show
+      692 414 moveto ( int               play_time) show
+      692 431 moveto ( int               synchro_time) show
+      692 448 moveto ( OM_Media          media) show
+      692 465 moveto ( OM_Action         action) show
+      692 482 moveto ( OM_ActionPointer  next) show
+      692 499 moveto ( OM_ActionPointer  next_bucket) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      692 348 moveto
+      692 508 lineto
+      1012 508 lineto
+      1012 344 lineto
+      852 344 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      848 117 moveto (\377\001\101\167\077\056\072\121\044\137\377\000 true) show
+      848 133 moveto (\377\001\101\167\077\056\101\060\377\000  false) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      808 124 moveto
+      -8 32 atan dup cos 10.000 mul 840 exch sub
+      exch sin 10.000 mul 116 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      840 116 10.000 4.000 32 -8 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      840 116 10.000 4.000 32 -8 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      384 590 moveto (OM_Move) show
+      384 607 moveto ( OM_Point point) show
+      384 624 moveto ( String   rotation) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      384 592 moveto
+      384 636 lineto
+      576 636 lineto
+      576 584 lineto
+      464 584 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+grestore
+tgifsavedpage restore
+end
+showpage
+
+%%Page: 3 3
+
+%%PageBoundingBox: 23 10 577 825
+tgifdict begin
+/tgifsavedpage save def
+
+1 setmiterlimit
+1 setlinewidth
+
+0 setgray
+
+72 0 mul 72 11.70 mul translate
+72 128 div 100.000 mul 100 div dup neg scale
+
+gsave
+
+/tgiforigctm matrix currentmatrix def
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H /Courier /Ryumin-Light-H jisfont
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      48 54 moveto (OM_Atom) show
+      48 71 moveto ( name= main) show
+      48 88 moveto ( nextbucket=) show
+      48 105 moveto ( node=) show
+      48 122 moveto ( media= null) show
+      48 139 moveto ( action= null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      48 57 moveto
+      48 142 lineto
+      192 142 lineto
+      192 52 lineto
+      120 52 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      544 54 moveto (OM_Atom) show
+      544 71 moveto ( name= background) show
+      544 88 moveto ( nextbucket=) show
+      544 105 moveto ( node= null) show
+      544 122 moveto ( media= #background) show
+      544 139 moveto ( action= null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      544 57 moveto
+      544 142 lineto
+      748 142 lineto
+      748 52 lineto
+      616 52 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      300 54 moveto (OM_Atom) show
+      300 71 moveto ( name= scene1) show
+      300 88 moveto ( nextbucket=) show
+      300 105 moveto ( node= /*OM_Node*/) show
+      300 122 moveto ( media= null) show
+      300 139 moveto ( action= null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      300 57 moveto
+      300 142 lineto
+      496 142 lineto
+      496 52 lineto
+      372 52 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      44 210 moveto (OM_Atom) show
+      44 227 moveto ( name= momotaro) show
+      44 244 moveto ( nextbucket=) show
+      44 261 moveto ( node= null) show
+      44 278 moveto ( media= #momotaro) show
+      44 295 moveto ( action= null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      44 213 moveto
+      44 298 lineto
+      220 298 lineto
+      220 208 lineto
+      116 208 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      544 210 moveto (OM_Atom) show
+      544 227 moveto ( name= akaoni) show
+      544 244 moveto ( nextbucket=) show
+      544 261 moveto ( node= null) show
+      544 278 moveto ( media= #akaoni) show
+      544 295 moveto ( action= null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      544 213 moveto
+      544 298 lineto
+      704 298 lineto
+      704 208 lineto
+      616 208 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      796 54 moveto (OM_Atom) show
+      796 71 moveto ( name= outbg) show
+      796 88 moveto ( nextbucket=) show
+      796 105 moveto ( node= null) show
+      796 122 moveto ( media= null) show
+      796 139 moveto ( action= @outbg) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      796 57 moveto
+      796 142 lineto
+      952 142 lineto
+      952 52 lineto
+      868 52 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      300 210 moveto (OM_Atom) show
+      300 227 moveto ( name= tojo1) show
+      300 244 moveto ( nextbucket=) show
+      300 261 moveto ( node= null) show
+      300 278 moveto ( media= null) show
+      300 295 moveto ( action= @tojo1) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      300 213 moveto
+      300 298 lineto
+      460 298 lineto
+      460 208 lineto
+      372 208 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      796 210 moveto (OM_Atom) show
+      796 227 moveto ( name= tojo2) show
+      796 244 moveto ( nextbucket=) show
+      796 261 moveto ( node= null) show
+      796 278 moveto ( media= null) show
+      796 295 moveto ( action= @tojo2) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      796 213 moveto
+      796 298 lineto
+      956 298 lineto
+      956 208 lineto
+      868 208 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      44 366 moveto (OM_Atom) show
+      44 383 moveto ( name= monkey) show
+      44 400 moveto ( nextbucket=) show
+      44 417 moveto ( node= null) show
+      44 434 moveto ( media= #monkey) show
+      44 451 moveto ( action= null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      44 369 moveto
+      44 454 lineto
+      204 454 lineto
+      204 364 lineto
+      116 364 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      296 366 moveto (OM_Atom) show
+      296 383 moveto ( name= tojo3) show
+      296 400 moveto ( nextbucket=) show
+      296 417 moveto ( node= null) show
+      296 434 moveto ( media= null) show
+      296 451 moveto ( action= @tojo3) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      296 369 moveto
+      296 454 lineto
+      452 454 lineto
+      452 364 lineto
+      368 364 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      544 366 moveto (OM_Atom) show
+      544 383 moveto ( name= moveleft) show
+      544 400 moveto ( nextbucket=) show
+      544 417 moveto ( node= null) show
+      544 434 moveto ( media= null) show
+      544 451 moveto ( action= @moveleft) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      544 369 moveto
+      544 454 lineto
+      732 454 lineto
+      732 364 lineto
+      616 364 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      772 366 moveto (OM_Atom) show
+      772 383 moveto ( name= sentence1) show
+      772 400 moveto ( nextbucket=) show
+      772 417 moveto ( node= null) show
+      772 434 moveto ( media= #sentence1) show
+      772 451 moveto ( action= null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      772 369 moveto
+      772 454 lineto
+      960 454 lineto
+      960 364 lineto
+      844 364 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      48 522 moveto (OM_Atom) show
+      48 539 moveto ( name= teroppu) show
+      48 556 moveto ( nextbucket=) show
+      48 573 moveto ( node= null) show
+      48 590 moveto ( media= null) show
+      48 607 moveto ( action= @teroppu) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      48 525 moveto
+      48 610 lineto
+      224 610 lineto
+      224 520 lineto
+      120 520 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      296 522 moveto (OM_Atom) show
+      296 539 moveto ( name= sentence2) show
+      296 556 moveto ( nextbucket=) show
+      296 573 moveto ( node= null) show
+      296 590 moveto ( media= #sentence2) show
+      296 607 moveto ( action= null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      296 525 moveto
+      296 610 lineto
+      484 610 lineto
+      484 520 lineto
+      368 520 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      544 522 moveto (OM_Atom) show
+      544 539 moveto ( name= talk) show
+      544 556 moveto ( nextbucket=) show
+      544 573 moveto ( node= null) show
+      544 590 moveto ( media= null) show
+      544 607 moveto ( action= @talk) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      544 525 moveto
+      544 610 lineto
+      688 610 lineto
+      688 520 lineto
+      616 520 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      780 522 moveto (OM_Atom) show
+      780 539 moveto ( name= runaway) show
+      780 556 moveto ( nextbucket=) show
+      780 573 moveto ( node= null) show
+      780 590 moveto ( media= null) show
+      780 607 moveto ( action= @runaway) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      780 525 moveto
+      780 610 lineto
+      960 610 lineto
+      960 520 lineto
+      852 520 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      48 682 moveto (OM_Atom) show
+      48 699 moveto ( name= sound) show
+      48 716 moveto ( nextbucket=) show
+      48 733 moveto ( node= null) show
+      48 750 moveto ( media= #sound) show
+      48 767 moveto ( action= null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      48 685 moveto
+      48 770 lineto
+      200 770 lineto
+      200 680 lineto
+      120 680 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      296 682 moveto (OM_Atom) show
+      296 699 moveto ( name= music) show
+      296 716 moveto ( nextbucket= null) show
+      296 733 moveto ( node= null) show
+      296 750 moveto ( media= null) show
+      296 767 moveto ( action= @music) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      296 685 moveto
+      296 770 lineto
+      476 770 lineto
+      476 680 lineto
+      368 680 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      176 84 moveto
+      0 120 atan dup cos 10.000 mul 296 exch sub
+      exch sin 10.000 mul 84 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      296 84 10.000 4.000 120 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      296 84 10.000 4.000 120 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      428 84 moveto
+      0 112 atan dup cos 10.000 mul 540 exch sub
+      exch sin 10.000 mul 84 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      540 84 10.000 4.000 112 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      540 84 10.000 4.000 112 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      684 84 moveto
+      0 108 atan dup cos 10.000 mul 792 exch sub
+      exch sin 10.000 mul 84 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      792 84 10.000 4.000 108 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      792 84 10.000 4.000 108 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      924 80 moveto
+      976 80 lineto
+      976 172 lineto
+      112 172 lineto
+      28 0 atan dup cos 10.000 mul 112 exch sub
+      exch sin 10.000 mul 200 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      112 200 10.000 4.000 0 28 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      112 200 10.000 4.000 0 28 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      924 236 moveto
+      976 236 lineto
+      976 328 lineto
+      112 328 lineto
+      28 0 atan dup cos 10.000 mul 112 exch sub
+      exch sin 10.000 mul 356 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      112 356 10.000 4.000 0 28 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      112 356 10.000 4.000 0 28 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      908 392 moveto
+      980 392 lineto
+      980 484 lineto
+      116 484 lineto
+      28 0 atan dup cos 10.000 mul 116 exch sub
+      exch sin 10.000 mul 512 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      116 512 10.000 4.000 0 28 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      116 512 10.000 4.000 0 28 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      920 548 moveto
+      984 548 lineto
+      984 640 lineto
+      120 640 lineto
+      32 0 atan dup cos 10.000 mul 120 exch sub
+      exch sin 10.000 mul 672 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      120 672 10.000 4.000 0 32 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      120 672 10.000 4.000 0 32 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      172 240 moveto
+      0 120 atan dup cos 10.000 mul 292 exch sub
+      exch sin 10.000 mul 240 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      292 240 10.000 4.000 120 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      292 240 10.000 4.000 120 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      428 240 moveto
+      0 112 atan dup cos 10.000 mul 540 exch sub
+      exch sin 10.000 mul 240 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      540 240 10.000 4.000 112 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      540 240 10.000 4.000 112 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      680 240 moveto
+      0 108 atan dup cos 10.000 mul 788 exch sub
+      exch sin 10.000 mul 240 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      788 240 10.000 4.000 108 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      788 240 10.000 4.000 108 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      172 396 moveto
+      0 120 atan dup cos 10.000 mul 292 exch sub
+      exch sin 10.000 mul 396 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      292 396 10.000 4.000 120 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      292 396 10.000 4.000 120 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      180 552 moveto
+      0 112 atan dup cos 10.000 mul 292 exch sub
+      exch sin 10.000 mul 552 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      292 552 10.000 4.000 112 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      292 552 10.000 4.000 112 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      172 712 moveto
+      0 120 atan dup cos 10.000 mul 292 exch sub
+      exch sin 10.000 mul 712 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      292 712 10.000 4.000 120 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      292 712 10.000 4.000 120 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      424 396 moveto
+      0 112 atan dup cos 10.000 mul 536 exch sub
+      exch sin 10.000 mul 396 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      536 396 10.000 4.000 112 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      536 396 10.000 4.000 112 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      424 552 moveto
+      0 112 atan dup cos 10.000 mul 536 exch sub
+      exch sin 10.000 mul 552 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      536 552 10.000 4.000 112 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      536 552 10.000 4.000 112 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      676 396 moveto
+      0 88 atan dup cos 10.000 mul 764 exch sub
+      exch sin 10.000 mul 396 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      764 396 10.000 4.000 88 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      764 396 10.000 4.000 88 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      672 552 moveto
+      0 108 atan dup cos 10.000 mul 780 exch sub
+      exch sin 10.000 mul 552 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      780 552 10.000 4.000 108 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      780 552 10.000 4.000 108 0 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      48 806 moveto (OM_Node) show
+      48 823 moveto ( head= <main>) show
+      48 840 moveto ( body=) show
+      48 857 moveto ( parent= null) show
+      48 874 moveto ( next=) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      48 812 moveto
+      48 884 lineto
+      184 884 lineto
+      184 804 lineto
+      119 804 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      108 821 moveto () show
+      108 837 moveto () show
+      108 853 moveto () show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      120 100 moveto
+      248 100 lineto
+      248 780 lineto
+      128 780 lineto
+      20 0 atan dup cos 10.000 mul 128 exch sub
+      exch sin 10.000 mul 800 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      128 800 10.000 4.000 0 20 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      128 800 10.000 4.000 0 20 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      128 45 moveto (<main>) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      308 806 moveto (OM_Node) show
+      308 823 moveto ( head= <scene1>) show
+      308 840 moveto ( body=) show
+      308 857 moveto ( parent=) show
+      308 874 moveto ( next= null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      308 812 moveto
+      308 884 lineto
+      468 884 lineto
+      468 804 lineto
+      379 804 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      368 821 moveto () show
+      368 837 moveto () show
+      368 853 moveto () show
+   grestore
+
+% TEXT
+0 setgray
+/Courier findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      372 45 moveto (<scene1>) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      120 868 moveto
+      0 184 atan dup cos 10.000 mul 304 exch sub
+      exch sin 10.000 mul 868 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      304 868 10.000 4.000 184 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      304 868 10.000 4.000 184 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      128 836 moveto
+      212 836 lineto
+      80 0 atan dup cos 10.000 mul 212 exch sub
+      exch sin 10.000 mul 916 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      212 916 10.000 4.000 0 80 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      212 916 10.000 4.000 0 80 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      612 796 moveto
+      0 168 atan dup cos 10.000 mul 780 exch sub
+      exch sin 10.000 mul 796 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      780 796 10.000 4.000 168 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      780 796 10.000 4.000 168 0 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      620 45 moveto (<background>) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      408 1032 moveto
+      0 132 atan dup cos 10.000 mul 540 exch sub
+      exch sin 10.000 mul 1032 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      540 1032 10.000 4.000 132 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      540 1032 10.000 4.000 132 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      656 1032 moveto
+      0 124 atan dup cos 10.000 mul 780 exch sub
+      exch sin 10.000 mul 1032 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      780 1032 10.000 4.000 124 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      780 1032 10.000 4.000 124 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      896 1032 moveto
+      1000 1032 lineto
+      1000 1108 lineto
+      132 1108 lineto
+      28 0 atan dup cos 10.000 mul 132 exch sub
+      exch sin 10.000 mul 1136 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      132 1136 10.000 4.000 0 28 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      132 1136 10.000 4.000 0 28 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      432 1252 moveto
+      0 148 atan dup cos 10.000 mul 580 exch sub
+      exch sin 10.000 mul 1252 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      580 1252 10.000 4.000 148 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      580 1252 10.000 4.000 148 0 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      392 793 moveto (/*OM_Node*/) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      124 201 moveto (<momotaro>) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      624 201 moveto (<akaoni>) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      132 357 moveto (<monkey>) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      852 357 moveto (<sentence1>) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      376 513 moveto (<sentence2>) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      136 673 moveto (<sound>) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      880 45 moveto (<outbg>) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      380 201 moveto (<tojo1>) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      880 201 moveto (<tojo2>) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      372 357 moveto (<tojo3>) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      624 357 moveto (<moveleft>) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      132 513 moveto (<teroppu>) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      628 513 moveto (<talk>) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      868 513 moveto (<runaway>) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      380 673 moveto (<music>) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      500 682 moveto (OM_Leaf) show
+      500 699 moveto ( leaf_flag= false) show
+      500 716 moveto ( comment= null) show
+      500 733 moveto ( weight= ???) show
+      500 750 moveto ( media_atom= <background>) show
+      500 767 moveto ( action_atom= <outbg>) show
+      500 784 moveto ( ap= /*AP1*/) show
+      500 801 moveto ( seq_next=) show
+      500 818 moveto ( nonorder= null) show
+      500 835 moveto ( node= /*OM_Node*/) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      500 684 moveto
+      500 844 lineto
+      760 844 lineto
+      760 680 lineto
+      572 680 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      784 682 moveto (OM_Leaf) show
+      784 699 moveto ( leaf_flag= false) show
+      784 716 moveto ( comment= null) show
+      784 733 moveto ( weight= ???) show
+      784 750 moveto ( media_atom= <momotaro>) show
+      784 767 moveto ( action_atom= <tojo1>) show
+      784 784 moveto ( ap= /*AP2*/) show
+      784 801 moveto ( seq_next= null) show
+      784 818 moveto ( nonorder=) show
+      784 835 moveto ( node= /*OM_Node*/) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      784 684 moveto
+      784 844 lineto
+      1020 844 lineto
+      1020 680 lineto
+      856 680 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      48 918 moveto (OM_Leaf) show
+      48 935 moveto ( leaf_flag= false) show
+      48 952 moveto ( comment= hogehoge) show
+      48 969 moveto ( weight= ???) show
+      48 986 moveto ( media_atom= <scene1>) show
+      48 1003 moveto ( action_atom= null) show
+      48 1020 moveto ( ap= null) show
+      48 1037 moveto ( seq_next= null) show
+      48 1054 moveto ( nonorder= null) show
+      48 1071 moveto ( node=) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      48 920 moveto
+      48 1080 lineto
+      268 1080 lineto
+      268 916 lineto
+      120 916 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      404 852 moveto
+      488 852 lineto
+      488 896 lineto
+      248 896 lineto
+      20 0 atan dup cos 10.000 mul 248 exch sub
+      exch sin 10.000 mul 916 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      248 916 10.000 4.000 0 20 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      248 916 10.000 4.000 0 20 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      300 918 moveto (OM_Leaf) show
+      300 935 moveto ( leaf_flag= false) show
+      300 952 moveto ( comment= null) show
+      300 969 moveto ( weight= ???) show
+      300 986 moveto ( media_atom= <akaoni>) show
+      300 1003 moveto ( action_atom= <tojo2>) show
+      300 1020 moveto ( ap= /*AP3*/) show
+      300 1037 moveto ( seq_next=) show
+      300 1054 moveto ( nonorder= null) show
+      300 1071 moveto ( node= /*OM_Node*/) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      300 920 moveto
+      300 1080 lineto
+      520 1080 lineto
+      520 916 lineto
+      372 916 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      884 812 moveto
+      992 812 lineto
+      992 888 lineto
+      504 888 lineto
+      24 0 atan dup cos 10.000 mul 504 exch sub
+      exch sin 10.000 mul 912 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      504 912 10.000 4.000 0 24 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      504 912 10.000 4.000 0 24 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      540 918 moveto (OM_Leaf) show
+      540 935 moveto ( leaf_flag= false) show
+      540 952 moveto ( comment= null) show
+      540 969 moveto ( weight= ???) show
+      540 986 moveto ( media_atom= <monkey>) show
+      540 1003 moveto ( action_atom= <tojo3>) show
+      540 1020 moveto ( ap= /*AP4*/) show
+      540 1037 moveto ( seq_next=) show
+      540 1054 moveto ( nonorder= null) show
+      540 1071 moveto ( node= /*OM_Node*/) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      540 920 moveto
+      540 1080 lineto
+      760 1080 lineto
+      760 916 lineto
+      612 916 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      780 918 moveto (OM_Leaf) show
+      780 935 moveto ( leaf_flag= false) show
+      780 952 moveto ( comment= null) show
+      780 969 moveto ( weight= ???) show
+      780 986 moveto ( media_atom= <momotaro>) show
+      780 1003 moveto ( action_atom= <moveleft>) show
+      780 1020 moveto ( ap= /*AP5*/) show
+      780 1037 moveto ( seq_next=) show
+      780 1054 moveto ( nonorder= null) show
+      780 1071 moveto ( node= /*OM_Node*/) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      780 920 moveto
+      780 1080 lineto
+      1024 1080 lineto
+      1024 916 lineto
+      852 916 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      44 1138 moveto (OM_Leaf) show
+      44 1155 moveto ( leaf_flag= false) show
+      44 1172 moveto ( comment= null) show
+      44 1189 moveto ( weight= ???) show
+      44 1206 moveto ( media_atom= <sentence1>) show
+      44 1223 moveto ( action_atom= <teroppu>) show
+      44 1240 moveto ( ap= /*AP6*/) show
+      44 1257 moveto ( seq_next=) show
+      44 1274 moveto ( nonorder= null) show
+      44 1291 moveto ( node= /*OM_Node*/) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      44 1140 moveto
+      44 1300 lineto
+      288 1300 lineto
+      288 1136 lineto
+      116 1136 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      316 1138 moveto (OM_Leaf) show
+      316 1155 moveto ( leaf_flag= false) show
+      316 1172 moveto ( comment= null) show
+      316 1189 moveto ( weight= ???) show
+      316 1206 moveto ( media_atom= <sentence2>) show
+      316 1223 moveto ( action_atom= <talk>) show
+      316 1240 moveto ( ap= /*AP7*/) show
+      316 1257 moveto ( seq_next=) show
+      316 1274 moveto ( nonorder= null) show
+      316 1291 moveto ( node= /*OM_Node*/) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      316 1140 moveto
+      316 1300 lineto
+      560 1300 lineto
+      560 1136 lineto
+      388 1136 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      156 1252 moveto
+      0 156 atan dup cos 10.000 mul 312 exch sub
+      exch sin 10.000 mul 1252 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      312 1252 10.000 4.000 156 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      312 1252 10.000 4.000 156 0 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      588 1130 moveto (OM_Leaf) show
+      588 1147 moveto ( leaf_flag= false) show
+      588 1164 moveto ( comment= null) show
+      588 1181 moveto ( weight= ???) show
+      588 1198 moveto ( media_atom= <akaoni>) show
+      588 1215 moveto ( action_atom= <runaway>) show
+      588 1232 moveto ( ap= /*AP8*/) show
+      588 1249 moveto ( seq_next=) show
+      588 1266 moveto ( nonorder= null) show
+      588 1283 moveto ( node= /*OM_Node*/) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      588 1132 moveto
+      588 1292 lineto
+      832 1292 lineto
+      832 1128 lineto
+      660 1128 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      384 832 moveto
+      0 112 atan dup cos 10.000 mul 496 exch sub
+      exch sin 10.000 mul 832 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      496 832 10.000 4.000 112 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      496 832 10.000 4.000 112 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      120 1064 moveto
+      288 1064 lineto
+      288 816 lineto
+      0 -96 atan dup cos 10.000 mul 192 exch sub
+      exch sin 10.000 mul 816 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      192 816 10.000 4.000 -96 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      192 816 10.000 4.000 -96 0 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      588 1314 moveto (OM_Leaf) show
+      588 1331 moveto ( leaf_flag= false) show
+      588 1348 moveto ( comment= null) show
+      588 1365 moveto ( weight= ???) show
+      588 1382 moveto ( media_atom= <sound>) show
+      588 1399 moveto ( action_atom= <music>) show
+      588 1416 moveto ( ap= /*AP9*/) show
+      588 1433 moveto ( seq_next= null) show
+      588 1450 moveto ( nonorder= null) show
+      588 1467 moveto ( node= /*OM_Node*/) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      588 1316 moveto
+      588 1476 lineto
+      832 1476 lineto
+      832 1312 lineto
+      660 1312 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      704 1244 moveto
+      860 1244 lineto
+      860 1328 lineto
+      0 -24 atan dup cos 10.000 mul 836 exch sub
+      exch sin 10.000 mul 1328 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      836 1328 10.000 4.000 -24 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      836 1328 10.000 4.000 -24 0 tgifarrowtip
+   closepath fill
+grestore
+
+grestore
+tgifsavedpage restore
+end
+showpage
+
+%%Page: 4 4
+
+%%PageBoundingBox: 25 15 570 830
+tgifdict begin
+/tgifsavedpage save def
+
+1 setmiterlimit
+1 setlinewidth
+
+0 setgray
+
+72 0 mul 72 11.70 mul translate
+72 128 div 100.000 mul 100 div dup neg scale
+
+gsave
+
+/tgiforigctm matrix currentmatrix def
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H /Courier /Ryumin-Light-H jisfont
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      148 37 moveto (#background) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      372 50 moveto (OM_Media) show
+      372 67 moveto ( media_type=1) show
+      372 84 moveto ( media_time=-1) show
+      372 101 moveto ( comment=null) show
+      372 118 moveto ( media_atom=<momotaro>) show
+      372 135 moveto ( picture=) show
+      372 152 moveto ( sound=null) show
+      372 169 moveto ( text=null) show
+      372 186 moveto ( 3d=null) show
+      372 203 moveto ( other_media=null) show
+      372 220 moveto ( ap=) show
+      372 237 moveto ( next=) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      376 52 moveto
+      376 244 lineto
+      620 244 lineto
+      620 44 lineto
+      460 44 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      724 50 moveto (OM_Media) show
+      724 67 moveto ( media_type=1) show
+      724 84 moveto ( media_time=-1) show
+      724 101 moveto ( comment=null) show
+      724 118 moveto ( media_atom=<akaoni>) show
+      724 135 moveto ( picture=) show
+      724 152 moveto ( sound=null) show
+      724 169 moveto ( text=null) show
+      724 186 moveto ( 3d=null) show
+      724 203 moveto ( other_media=null) show
+      724 220 moveto ( ap=) show
+      724 237 moveto ( next=#monkey) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      724 52 moveto
+      724 244 lineto
+      944 244 lineto
+      944 44 lineto
+      808 44 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      460 37 moveto (#momotaro) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      812 37 moveto (#akaoni) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      124 232 moveto
+      0 240 atan dup cos 10.000 mul 364 exch sub
+      exch sin 10.000 mul 232 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      364 232 10.000 4.000 240 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      364 232 10.000 4.000 240 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      440 232 moveto
+      0 276 atan dup cos 10.000 mul 716 exch sub
+      exch sin 10.000 mul 232 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      716 232 10.000 4.000 276 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      716 232 10.000 4.000 276 0 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      48 266 moveto (OM_3D) show
+      48 283 moveto ( url=http://.../haikei.vrml) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      48 268 moveto
+      48 292 lineto
+      328 292 lineto
+      328 260 lineto
+      104 260 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      48 490 moveto (OM_Action) show
+      48 507 moveto ( action_type= 1) show
+      48 524 moveto ( comment=null) show
+      48 541 moveto ( atom= <outbg>) show
+      48 558 moveto ( out=) show
+      48 575 moveto ( del=null) show
+      48 592 moveto ( move=null) show
+      48 609 moveto ( speak=null) show
+      48 626 moveto ( light=null) show
+      48 643 moveto ( next=) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      48 492 moveto
+      48 648 lineto
+      212 648 lineto
+      212 488 lineto
+      144 488 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      372 270 moveto (OM_Picture) show
+      372 287 moveto ( url=http://.../momotaro.jpg) show
+      372 304 moveto ( scale=???) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      372 272 moveto
+      372 316 lineto
+      664 316 lineto
+      664 264 lineto
+      472 264 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      376 526 moveto (OM_Action) show
+      376 543 moveto ( action_type= 1) show
+      376 560 moveto ( comment=null) show
+      376 577 moveto ( atom= <tojo1>) show
+      376 594 moveto ( out=) show
+      376 611 moveto ( del=null) show
+      376 628 moveto ( move=null) show
+      376 645 moveto ( speak=null) show
+      376 662 moveto ( light=null) show
+      376 679 moveto ( next= ) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      376 528 moveto
+      376 684 lineto
+      548 684 lineto
+      548 524 lineto
+      472 524 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      480 774 moveto (OM_Point) show
+      480 791 moveto ( point_x=0.5) show
+      480 808 moveto ( point_y=1.0) show
+      480 825 moveto ( point_z=0.0) show
+      480 842 moveto ( next=null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      480 776 moveto
+      480 848 lineto
+      620 848 lineto
+      620 768 lineto
+      560 768 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      724 270 moveto (OM_Picture) show
+      724 287 moveto ( url=http://.../akaoni.jpg) show
+      724 304 moveto ( scale=???) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      724 272 moveto
+      724 316 lineto
+      992 316 lineto
+      992 264 lineto
+      824 264 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      720 522 moveto (OM_Action) show
+      720 539 moveto ( action_type= 1) show
+      720 556 moveto ( comment=null) show
+      720 573 moveto ( atom= <tojo2>) show
+      720 590 moveto ( out=) show
+      720 607 moveto ( del=null) show
+      720 624 moveto ( move=null) show
+      720 641 moveto ( speak=null) show
+      720 658 moveto ( light=null) show
+      720 675 moveto ( next=@tojo3) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      720 524 moveto
+      720 684 lineto
+      896 684 lineto
+      896 520 lineto
+      816 520 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      856 774 moveto (OM_Point) show
+      856 791 moveto ( point_x=-0.5) show
+      856 808 moveto ( point_y=1.0) show
+      856 825 moveto ( point_z=0.0) show
+      856 842 moveto ( next=null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      856 776 moveto
+      856 848 lineto
+      1000 848 lineto
+      1000 768 lineto
+      936 768 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      48 674 moveto (OM_Out) show
+      48 691 moveto ( point=null) show
+      48 708 moveto ( font=null) show
+      48 725 moveto ( r=???) show
+      48 742 moveto ( g=???) show
+      48 759 moveto ( b=???) show
+      48 776 moveto ( volume=0) show
+      48 793 moveto ( scale=???) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      48 676 moveto
+      48 804 lineto
+      184 804 lineto
+      184 668 lineto
+      112 668 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      320 718 moveto (OM_Out) show
+      320 735 moveto ( point=) show
+      320 752 moveto ( font=null) show
+      320 769 moveto ( r=???) show
+      320 786 moveto ( g=???) show
+      320 803 moveto ( b=???) show
+      320 820 moveto ( volume=0) show
+      320 837 moveto ( scale=???) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      320 724 moveto
+      320 852 lineto
+      456 852 lineto
+      456 716 lineto
+      384 716 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      684 718 moveto (OM_Out) show
+      684 735 moveto ( point=) show
+      684 752 moveto ( font=null) show
+      684 769 moveto ( r=???) show
+      684 786 moveto ( g=???) show
+      684 803 moveto ( b=???) show
+      684 820 moveto ( volume=0) show
+      684 837 moveto ( scale=null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      684 720 moveto
+      684 848 lineto
+      820 848 lineto
+      820 712 lineto
+      748 712 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      784 584 moveto
+      952 584 lineto
+      952 692 lineto
+      756 692 lineto
+      16 0 atan dup cos 10.000 mul 756 exch sub
+      exch sin 10.000 mul 708 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      756 708 10.000 4.000 0 16 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      756 708 10.000 4.000 0 16 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      148 477 moveto (@outbg) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      484 517 moveto (@tojo1) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      820 513 moveto (@tojo2) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      836 132 moveto
+      972 132 lineto
+      124 0 atan dup cos 10.000 mul 972 exch sub
+      exch sin 10.000 mul 256 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      972 256 10.000 4.000 0 124 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      972 256 10.000 4.000 0 124 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      480 128 moveto
+      640 128 lineto
+      132 0 atan dup cos 10.000 mul 640 exch sub
+      exch sin 10.000 mul 260 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      640 260 10.000 4.000 0 132 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      640 260 10.000 4.000 0 132 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      152 164 moveto
+      284 164 lineto
+      88 0 atan dup cos 10.000 mul 284 exch sub
+      exch sin 10.000 mul 252 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      284 252 10.000 4.000 0 88 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      284 252 10.000 4.000 0 88 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      48 334 moveto (OM_ActionPointer) show
+      48 351 moveto ( loop=0) show
+      48 368 moveto ( scenario_num=???) show
+      48 385 moveto ( play_time= -1) show
+      48 402 moveto ( synchro_time= -1) show
+      48 419 moveto ( media=#background) show
+      48 436 moveto ( action=) show
+      48 453 moveto ( next=null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      48 336 moveto
+      48 460 lineto
+      244 460 lineto
+      244 332 lineto
+      208 332 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      100 216 moveto
+      344 216 lineto
+      344 360 lineto
+      0 -92 atan dup cos 10.000 mul 252 exch sub
+      exch sin 10.000 mul 360 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      252 360 10.000 4.000 -92 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      252 360 10.000 4.000 -92 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      108 552 moveto
+      292 552 lineto
+      292 696 lineto
+      0 -104 atan dup cos 10.000 mul 188 exch sub
+      exch sin 10.000 mul 696 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      188 696 10.000 4.000 -104 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      188 696 10.000 4.000 -104 0 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      372 366 moveto (OM_ActionPointer) show
+      372 383 moveto ( loop=0) show
+      372 400 moveto ( scenario_num=???) show
+      372 417 moveto ( play_time= -1) show
+      372 434 moveto ( synchro_time= -1) show
+      372 451 moveto ( media=#momotaro) show
+      372 468 moveto ( action=) show
+      372 485 moveto ( next=) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      372 368 moveto
+      372 492 lineto
+      560 492 lineto
+      560 364 lineto
+      532 364 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      420 216 moveto
+      684 216 lineto
+      684 392 lineto
+      0 -116 atan dup cos 10.000 mul 568 exch sub
+      exch sin 10.000 mul 392 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      568 392 10.000 4.000 -116 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      568 392 10.000 4.000 -116 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      404 728 moveto
+      568 728 lineto
+      32 0 atan dup cos 10.000 mul 568 exch sub
+      exch sin 10.000 mul 760 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      568 760 10.000 4.000 0 32 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      568 760 10.000 4.000 0 32 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      724 362 moveto (OM_ActionPointer) show
+      724 379 moveto ( loop=0) show
+      724 396 moveto ( scenario_num=???) show
+      724 413 moveto ( play_time= -1) show
+      724 430 moveto ( synchro_time= -1) show
+      724 447 moveto ( media=#akaoni) show
+      724 464 moveto ( action=) show
+      724 481 moveto ( next=/*AP8*/) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      724 364 moveto
+      724 492 lineto
+      916 492 lineto
+      916 360 lineto
+      888 360 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      772 728 moveto
+      956 728 lineto
+      32 0 atan dup cos 10.000 mul 956 exch sub
+      exch sin 10.000 mul 760 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      956 760 10.000 4.000 0 32 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      956 760 10.000 4.000 0 32 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      772 216 moveto
+      1012 216 lineto
+      1012 392 lineto
+      0 -92 atan dup cos 10.000 mul 920 exch sub
+      exch sin 10.000 mul 392 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      920 392 10.000 4.000 -92 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      920 392 10.000 4.000 -92 0 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      48 850 moveto (OM_Media) show
+      48 867 moveto ( type=2) show
+      48 884 moveto ( comment=null) show
+      48 901 moveto ( media_atom=<monkey>) show
+      48 918 moveto ( picture=) show
+      48 935 moveto ( sound=null) show
+      48 952 moveto ( text=null) show
+      48 969 moveto ( 3d=null) show
+      48 986 moveto ( other_media=null) show
+      48 1003 moveto ( ap=) show
+      48 1020 moveto ( next=#sentence1) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      48 852 moveto
+      48 1028 lineto
+      260 1028 lineto
+      260 844 lineto
+      132 844 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      140 833 moveto (#monkey) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      256 1302 moveto (OM_Action) show
+      256 1319 moveto ( action_type= 1) show
+      256 1336 moveto ( comment=hogehoge3) show
+      256 1353 moveto ( atom= <tojo3>) show
+      256 1370 moveto ( out=) show
+      256 1387 moveto ( del=null) show
+      256 1404 moveto ( move=null) show
+      256 1421 moveto ( speak=null) show
+      256 1438 moveto ( light=null) show
+      256 1455 moveto ( next=@moveleft ) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      256 1304 moveto
+      256 1468 lineto
+      436 1468 lineto
+      436 1300 lineto
+      352 1300 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      652 1310 moveto (OM_Point) show
+      652 1327 moveto ( point_x=0.3) show
+      652 1344 moveto ( point_y=1.0) show
+      652 1361 moveto ( point_z=0.5) show
+      652 1378 moveto ( next=null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      652 1312 moveto
+      652 1384 lineto
+      792 1384 lineto
+      792 1304 lineto
+      732 1304 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      48 1062 moveto (OM_Picture) show
+      48 1079 moveto ( url=http://.../monkey.mov) show
+      48 1096 moveto ( scale=???) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      48 1064 moveto
+      48 1108 lineto
+      316 1108 lineto
+      316 1056 lineto
+      148 1056 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      488 1306 moveto (OM_Out) show
+      488 1323 moveto ( point=) show
+      488 1340 moveto ( font=null) show
+      488 1357 moveto ( r=???) show
+      488 1374 moveto ( g=???) show
+      488 1391 moveto ( b=???) show
+      488 1408 moveto ( volume=0) show
+      488 1425 moveto ( scale=???) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      488 1312 moveto
+      488 1440 lineto
+      624 1440 lineto
+      624 1304 lineto
+      552 1304 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      568 1316 moveto
+      0 76 atan dup cos 10.000 mul 644 exch sub
+      exch sin 10.000 mul 1316 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      644 1316 10.000 4.000 76 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      644 1316 10.000 4.000 76 0 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      356 1293 moveto (@tojo3) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      48 1150 moveto (OM_ActionPointer) show
+      48 1167 moveto ( loop=0) show
+      48 1184 moveto ( comment=gehogeho) show
+      48 1201 moveto ( scenario_num=???) show
+      48 1218 moveto ( play_time=30) show
+      48 1235 moveto ( synchro_time=20) show
+      48 1252 moveto ( media=#monkey) show
+      48 1269 moveto ( action=) show
+      48 1286 moveto ( next=null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      48 1152 moveto
+      48 1296 lineto
+      236 1296 lineto
+      236 1148 lineto
+      208 1148 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      152 912 moveto
+      280 912 lineto
+      140 0 atan dup cos 10.000 mul 280 exch sub
+      exch sin 10.000 mul 1052 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      280 1052 10.000 4.000 0 140 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      280 1052 10.000 4.000 0 140 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      100 1000 moveto
+      352 1000 lineto
+      352 1156 lineto
+      0 -108 atan dup cos 10.000 mul 244 exch sub
+      exch sin 10.000 mul 1156 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      244 1156 10.000 4.000 -108 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      244 1156 10.000 4.000 -108 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      124 636 moveto
+      0 240 atan dup cos 10.000 mul 364 exch sub
+      exch sin 10.000 mul 636 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      364 636 10.000 4.000 240 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      364 636 10.000 4.000 240 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      444 676 moveto
+      0 268 atan dup cos 10.000 mul 712 exch sub
+      exch sin 10.000 mul 676 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      712 676 10.000 4.000 268 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      712 676 10.000 4.000 268 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      320 1364 moveto
+      0 168 atan dup cos 10.000 mul 488 exch sub
+      exch sin 10.000 mul 1364 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      488 1364 10.000 4.000 168 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      488 1364 10.000 4.000 168 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      140 432 moveto
+      260 432 lineto
+      260 512 lineto
+      0 -44 atan dup cos 10.000 mul 216 exch sub
+      exch sin 10.000 mul 512 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      216 512 10.000 4.000 -44 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      216 512 10.000 4.000 -44 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      460 464 moveto
+      580 464 lineto
+      580 540 lineto
+      0 -28 atan dup cos 10.000 mul 552 exch sub
+      exch sin 10.000 mul 540 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      552 540 10.000 4.000 -28 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      552 540 10.000 4.000 -28 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      816 460 moveto
+      928 460 lineto
+      928 536 lineto
+      0 -24 atan dup cos 10.000 mul 904 exch sub
+      exch sin 10.000 mul 536 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      904 536 10.000 4.000 -24 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      904 536 10.000 4.000 -24 0 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      376 1078 moveto (OM_Action) show
+      376 1095 moveto ( action_type= 3) show
+      376 1112 moveto ( comment=null) show
+      376 1129 moveto ( atom= <moveleft>) show
+      376 1146 moveto ( out=null) show
+      376 1163 moveto ( del=null) show
+      376 1180 moveto ( move=) show
+      376 1197 moveto ( speak=null) show
+      376 1214 moveto ( light=null) show
+      376 1231 moveto ( next=@teroppu) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      376 1080 moveto
+      376 1240 lineto
+      568 1240 lineto
+      568 1076 lineto
+      472 1076 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      476 1069 moveto (@moveleft) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      652 1038 moveto (OM_Point) show
+      652 1055 moveto ( point_x=0.4) show
+      652 1072 moveto ( point_y=1.0) show
+      652 1089 moveto ( point_z=0.0) show
+      652 1106 moveto ( next=) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      652 1040 moveto
+      652 1112 lineto
+      796 1112 lineto
+      796 1032 lineto
+      732 1032 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      832 1038 moveto (OM_Point) show
+      832 1055 moveto ( point_x=0.2) show
+      832 1072 moveto ( point_y=1.0) show
+      832 1089 moveto ( point_z=0.0) show
+      832 1106 moveto ( next=) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      832 1040 moveto
+      832 1112 lineto
+      976 1112 lineto
+      976 1032 lineto
+      912 1032 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      836 1162 moveto (OM_Point) show
+      836 1179 moveto ( point_x=0.0) show
+      836 1196 moveto ( point_y=1.5) show
+      836 1213 moveto ( point_z=0.0) show
+      836 1230 moveto ( next=) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      836 1164 moveto
+      836 1236 lineto
+      980 1236 lineto
+      980 1156 lineto
+      916 1156 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      836 1286 moveto (OM_Point) show
+      836 1303 moveto ( point_x=-0.3) show
+      836 1320 moveto ( point_y=1.0) show
+      836 1337 moveto ( point_z=0.0) show
+      836 1354 moveto ( next=null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      836 1288 moveto
+      836 1360 lineto
+      980 1360 lineto
+      980 1280 lineto
+      916 1280 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      908 1100 moveto
+      956 1100 lineto
+      52 0 atan dup cos 10.000 mul 956 exch sub
+      exch sin 10.000 mul 1152 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      956 1152 10.000 4.000 0 52 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      956 1152 10.000 4.000 0 52 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      912 1224 moveto
+      960 1224 lineto
+      52 0 atan dup cos 10.000 mul 960 exch sub
+      exch sin 10.000 mul 1276 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      960 1276 10.000 4.000 0 52 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      960 1276 10.000 4.000 0 52 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      376 910 moveto (OM_ActionPointer) show
+      376 927 moveto ( loop=0) show
+      376 944 moveto ( scenario_num=???) show
+      376 961 moveto ( play_time=-1) show
+      376 978 moveto ( synchro_time=-1) show
+      376 995 moveto ( media=#momotaro) show
+      376 1012 moveto ( action=) show
+      376 1029 moveto ( next=null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      376 916 moveto
+      376 1036 lineto
+      556 1036 lineto
+      556 908 lineto
+      536 908 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      468 1008 moveto
+      612 1008 lineto
+      612 1096 lineto
+      0 -40 atan dup cos 10.000 mul 572 exch sub
+      exch sin 10.000 mul 1096 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      572 1096 10.000 4.000 -40 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      572 1096 10.000 4.000 -40 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      444 480 moveto
+      656 480 lineto
+      656 920 lineto
+      0 -92 atan dup cos 10.000 mul 564 exch sub
+      exch sin 10.000 mul 920 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      564 920 10.000 4.000 -92 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      564 920 10.000 4.000 -92 0 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      48 50 moveto (OM_Media) show
+      48 67 moveto ( media_type=3) show
+      48 84 moveto ( media_time=-1 ) show
+      48 101 moveto ( comment=hogehoge2) show
+      48 118 moveto ( media_atom=<background>) show
+      48 135 moveto ( picture=null) show
+      48 152 moveto ( sound=null) show
+      48 169 moveto ( text=null) show
+      48 186 moveto ( three_d=) show
+      48 203 moveto ( other_media=null) show
+      48 220 moveto ( ap=) show
+      48 237 moveto ( next=) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      48 52 moveto
+      48 244 lineto
+      308 244 lineto
+      308 44 lineto
+      132 44 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      436 588 moveto
+      576 588 lineto
+      576 696 lineto
+      396 696 lineto
+      16 0 atan dup cos 10.000 mul 396 exch sub
+      exch sin 10.000 mul 712 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      396 712 10.000 4.000 0 16 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      396 712 10.000 4.000 0 16 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      452 1176 moveto
+      636 1176 lineto
+      636 956 lineto
+      0 44 atan dup cos 10.000 mul 680 exch sub
+      exch sin 10.000 mul 956 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      680 956 10.000 4.000 44 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      680 956 10.000 4.000 44 0 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      172 314 moveto (/*AP1*/) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      496 346 moveto (/*AP2*/) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      848 342 moveto (/*AP3*/) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      168 1130 moveto (/*AP4*/) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      492 890 moveto (/*AP5*/) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      144 1264 moveto
+      348 1264 lineto
+      28 0 atan dup cos 10.000 mul 348 exch sub
+      exch sin 10.000 mul 1292 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      348 1292 10.000 4.000 0 28 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      348 1292 10.000 4.000 0 28 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      684 942 moveto (OM_Move) show
+      684 959 moveto ( point=) show
+      684 976 moveto ( rotation=null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      684 944 moveto
+      684 988 lineto
+      832 988 lineto
+      832 936 lineto
+      764 936 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      768 952 moveto
+      864 952 lineto
+      864 1008 lineto
+      744 1008 lineto
+      20 0 atan dup cos 10.000 mul 744 exch sub
+      exch sin 10.000 mul 1028 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      744 1028 10.000 4.000 0 20 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      744 1028 10.000 4.000 0 20 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      724 1100 moveto
+      0 96 atan dup cos 10.000 mul 820 exch sub
+      exch sin 10.000 mul 1100 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      820 1100 10.000 4.000 96 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      820 1100 10.000 4.000 96 0 tgifarrowtip
+   closepath fill
+grestore
+
+grestore
+tgifsavedpage restore
+end
+showpage
+
+%%Page: 5 5
+
+%%PageBoundingBox: 25 67 570 825
+tgifdict begin
+/tgifsavedpage save def
+
+1 setmiterlimit
+1 setlinewidth
+
+0 setgray
+
+72 0 mul 72 11.70 mul translate
+72 128 div 100.000 mul 100 div dup neg scale
+
+gsave
+
+/tgiforigctm matrix currentmatrix def
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H /Courier /Ryumin-Light-H jisfont
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      732 58 moveto (OM_Media) show
+      732 75 moveto ( type=3) show
+      732 92 moveto ( comment=null) show
+      732 109 moveto ( media_atom=<sound>) show
+      732 126 moveto ( picture=null) show
+      732 143 moveto ( sound=) show
+      732 160 moveto ( text=null) show
+      732 177 moveto ( 3d=null) show
+      732 194 moveto ( other_media=null) show
+      732 211 moveto ( ap=) show
+      732 228 moveto ( next=null) show
+      732 245 moveto ( ) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      732 60 moveto
+      732 236 lineto
+      932 236 lineto
+      932 52 lineto
+      816 52 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      820 45 moveto (#sound) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      732 538 moveto (OM_Action) show
+      732 555 moveto ( action_type= 1) show
+      732 572 moveto ( comment=null) show
+      732 589 moveto ( atom= <music>) show
+      732 606 moveto ( out=) show
+      732 623 moveto ( del=null) show
+      732 640 moveto ( move=null) show
+      732 657 moveto ( speak=null) show
+      732 674 moveto ( light=null) show
+      732 691 moveto ( next=null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      732 540 moveto
+      732 704 lineto
+      936 704 lineto
+      936 536 lineto
+      828 536 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      832 529 moveto (@music) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      52 1122 moveto (OM_Action) show
+      52 1139 moveto ( action_type= 2) show
+      52 1156 moveto ( comment=null) show
+      52 1173 moveto ( atom= <runaway>) show
+      52 1190 moveto ( out=null) show
+      52 1207 moveto ( del=) show
+      52 1224 moveto ( move=null) show
+      52 1241 moveto ( speak=null) show
+      52 1258 moveto ( light=null) show
+      52 1275 moveto ( next=) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      52 1124 moveto
+      52 1288 lineto
+      256 1288 lineto
+      256 1120 lineto
+      148 1120 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      152 1113 moveto (@runaway) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      732 266 moveto (OM_Sound) show
+      732 283 moveto ( url=http://.../taijo.wav) show
+      732 300 moveto ( volume=???) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      732 268 moveto
+      732 308 lineto
+      992 308 lineto
+      992 260 lineto
+      832 260 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      812 140 moveto
+      956 140 lineto
+      112 0 atan dup cos 10.000 mul 956 exch sub
+      exch sin 10.000 mul 252 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      956 252 10.000 4.000 0 112 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      956 252 10.000 4.000 0 112 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      792 208 moveto
+      1012 208 lineto
+      1012 388 lineto
+      0 -84 atan dup cos 10.000 mul 928 exch sub
+      exch sin 10.000 mul 388 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      928 388 10.000 4.000 -84 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      928 388 10.000 4.000 -84 0 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      732 746 moveto (OM_Out) show
+      732 763 moveto ( point=null) show
+      732 780 moveto ( font=null) show
+      732 797 moveto ( r=???) show
+      732 814 moveto ( g=???) show
+      732 831 moveto ( b=???) show
+      732 848 moveto ( volume=1.0) show
+      732 865 moveto ( scale=???) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      732 748 moveto
+      732 876 lineto
+      868 876 lineto
+      868 740 lineto
+      796 740 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      52 1334 moveto (OM_Del) show
+      52 1351 moveto ( ) show
+      52 1368 moveto ( ) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      52 1336 moveto
+      52 1376 lineto
+      224 1376 lineto
+      224 1328 lineto
+      116 1328 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      64 1361 moveto (\377\001\044\111\044\163\044\112\076\103\044\050\112\175\044\162\044\071\044\153\044\053\377\000?) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      108 1200 moveto
+      188 1200 lineto
+      124 0 atan dup cos 10.000 mul 188 exch sub
+      exch sin 10.000 mul 1324 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      188 1324 10.000 4.000 0 124 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      188 1324 10.000 4.000 0 124 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      48 58 moveto (OM_Media) show
+      48 75 moveto ( type=4) show
+      48 92 moveto ( comment=null) show
+      48 109 moveto ( media_atom=<sentence1>) show
+      48 126 moveto ( picture=null) show
+      48 143 moveto ( sound=null) show
+      48 160 moveto ( text=) show
+      48 177 moveto ( 3d=null) show
+      48 194 moveto ( other_media=null) show
+      48 211 moveto ( ap=) show
+      48 228 moveto ( next=) show
+      48 245 moveto ( ) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      48 60 moveto
+      48 236 lineto
+      288 236 lineto
+      288 52 lineto
+      132 52 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      404 58 moveto (OM_Media) show
+      404 75 moveto ( type=4) show
+      404 92 moveto ( comment=null) show
+      404 109 moveto ( media_atom=<sentence2>) show
+      404 126 moveto ( picture=null) show
+      404 143 moveto ( sound=null) show
+      404 160 moveto ( text=) show
+      404 177 moveto ( 3d=null) show
+      404 194 moveto ( other_media=null) show
+      404 211 moveto ( ap=) show
+      404 228 moveto ( next=) show
+      404 245 moveto ( ) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      404 60 moveto
+      404 236 lineto
+      644 236 lineto
+      644 52 lineto
+      488 52 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      136 45 moveto (#sentence1) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      500 45 moveto (#sentence2) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      48 266 moveto (OM_Text) show
+      48 283 moveto ( url=http://.../setumei.txt) show
+      48 300 moveto ( font=null) show
+      48 317 moveto ( scale=???) show
+      48 334 moveto ( r=???) show
+      48 351 moveto ( g=???) show
+      48 368 moveto ( b=???) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      48 268 moveto
+      48 376 lineto
+      324 376 lineto
+      324 260 lineto
+      120 260 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      48 578 moveto (OM_Action) show
+      48 595 moveto ( action_type= 1) show
+      48 612 moveto ( comment=null) show
+      48 629 moveto ( atom= <teroppu>) show
+      48 646 moveto ( out=) show
+      48 663 moveto ( del=null) show
+      48 680 moveto ( move=null) show
+      48 697 moveto ( speak=null) show
+      48 714 moveto ( light=null) show
+      48 731 moveto ( next= ) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      48 580 moveto
+      48 740 lineto
+      252 740 lineto
+      252 576 lineto
+      144 576 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      104 208 moveto
+      348 208 lineto
+      348 420 lineto
+      0 -108 atan dup cos 10.000 mul 240 exch sub
+      exch sin 10.000 mul 420 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      240 420 10.000 4.000 -108 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      240 420 10.000 4.000 -108 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      108 640 moveto
+      172 640 lineto
+      136 0 atan dup cos 10.000 mul 172 exch sub
+      exch sin 10.000 mul 776 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      172 776 10.000 4.000 0 136 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      172 776 10.000 4.000 0 136 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      404 266 moveto (OM_Text) show
+      404 283 moveto ( url=http://.../nanori.txt) show
+      404 300 moveto ( font=null) show
+      404 317 moveto ( scale=???) show
+      404 334 moveto ( r=???) show
+      404 351 moveto ( g=???) show
+      404 368 moveto ( b=???) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      404 268 moveto
+      404 376 lineto
+      672 376 lineto
+      672 260 lineto
+      476 260 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      404 594 moveto (OM_Action) show
+      404 611 moveto ( action_type= 4) show
+      404 628 moveto ( comment=null) show
+      404 645 moveto ( atom= <talk>) show
+      404 662 moveto ( out=null) show
+      404 679 moveto ( del=null) show
+      404 696 moveto ( move=null) show
+      404 713 moveto ( speak=) show
+      404 730 moveto ( light=null) show
+      404 747 moveto ( next=) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      404 596 moveto
+      404 756 lineto
+      608 756 lineto
+      608 592 lineto
+      500 592 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      124 156 moveto
+      276 156 lineto
+      100 0 atan dup cos 10.000 mul 276 exch sub
+      exch sin 10.000 mul 256 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      276 256 10.000 4.000 0 100 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      276 256 10.000 4.000 0 100 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      48 782 moveto (OM_Out) show
+      48 799 moveto ( point=null) show
+      48 816 moveto ( font=italic) show
+      48 833 moveto ( r=0.0) show
+      48 850 moveto ( g=0.0) show
+      48 867 moveto ( b=0.0) show
+      48 884 moveto ( volume=null) show
+      48 901 moveto ( scale=???) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      48 784 moveto
+      48 912 lineto
+      184 912 lineto
+      184 776 lineto
+      112 776 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      480 156 moveto
+      628 156 lineto
+      100 0 atan dup cos 10.000 mul 628 exch sub
+      exch sin 10.000 mul 256 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      628 256 10.000 4.000 0 100 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      628 256 10.000 4.000 0 100 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      124 224 moveto
+      0 272 atan dup cos 10.000 mul 396 exch sub
+      exch sin 10.000 mul 224 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      396 224 10.000 4.000 272 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      396 224 10.000 4.000 272 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      456 208 moveto
+      700 208 lineto
+      700 424 lineto
+      0 -100 atan dup cos 10.000 mul 600 exch sub
+      exch sin 10.000 mul 424 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      600 424 10.000 4.000 -100 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      600 424 10.000 4.000 -100 0 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      404 810 moveto (OM_Speak) show
+      404 827 moveto ( font=momotaro) show
+      404 844 moveto ( intonation=???) show
+      404 861 moveto ( pitch=???) show
+      404 878 moveto ( volume=???) show
+      404 895 moveto ( speed=???) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      404 812 moveto
+      404 908 lineto
+      584 908 lineto
+      584 808 lineto
+      492 808 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      488 708 moveto
+      564 708 lineto
+      100 0 atan dup cos 10.000 mul 564 exch sub
+      exch sin 10.000 mul 808 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      564 808 10.000 4.000 0 100 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      564 808 10.000 4.000 0 100 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      156 569 moveto (@teroppu) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      512 585 moveto (@talk) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      48 414 moveto (OM_ActionPointer) show
+      48 431 moveto ( loop=0) show
+      48 448 moveto ( scenario_num=???) show
+      48 465 moveto ( play_time=-1) show
+      48 482 moveto ( synchro_time=-1) show
+      48 499 moveto ( media=#sentence1) show
+      48 516 moveto ( action=) show
+      48 533 moveto ( next=null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      48 416 moveto
+      48 544 lineto
+      236 544 lineto
+      236 412 lineto
+      208 412 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      404 434 moveto (OM_ActionPointer) show
+      404 451 moveto ( loop=0) show
+      404 468 moveto ( scenario_num=???) show
+      404 485 moveto ( play_time=-1) show
+      404 502 moveto ( synchro_time=-1) show
+      404 519 moveto ( media=#sentence2) show
+      404 536 moveto ( action=) show
+      404 553 moveto ( next=null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      404 436 moveto
+      404 560 lineto
+      592 560 lineto
+      592 432 lineto
+      564 432 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      732 374 moveto (OM_ActionPointer) show
+      732 391 moveto ( loop=0) show
+      732 408 moveto ( scenario_num=???) show
+      732 425 moveto ( play_time=-1) show
+      732 442 moveto ( synchro_time=-1) show
+      732 459 moveto ( media=#momotaro) show
+      732 476 moveto ( action=) show
+      732 493 moveto ( next=null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      732 376 moveto
+      732 504 lineto
+      920 504 lineto
+      920 372 lineto
+      892 372 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      480 224 moveto
+      0 244 atan dup cos 10.000 mul 724 exch sub
+      exch sin 10.000 mul 224 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      724 224 10.000 4.000 244 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      724 224 10.000 4.000 244 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      140 512 moveto
+      284 512 lineto
+      284 600 lineto
+      0 -28 atan dup cos 10.000 mul 256 exch sub
+      exch sin 10.000 mul 600 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      256 600 10.000 4.000 -28 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      256 600 10.000 4.000 -28 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      500 532 moveto
+      644 532 lineto
+      644 620 lineto
+      0 -28 atan dup cos 10.000 mul 616 exch sub
+      exch sin 10.000 mul 620 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      616 620 10.000 4.000 -28 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      616 620 10.000 4.000 -28 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      824 472 moveto
+      976 472 lineto
+      976 552 lineto
+      0 -36 atan dup cos 10.000 mul 940 exch sub
+      exch sin 10.000 mul 552 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      940 552 10.000 4.000 -36 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      940 552 10.000 4.000 -36 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      792 600 moveto
+      860 600 lineto
+      132 0 atan dup cos 10.000 mul 860 exch sub
+      exch sin 10.000 mul 732 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      860 732 10.000 4.000 0 132 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      860 732 10.000 4.000 0 132 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      124 728 moveto
+      0 276 atan dup cos 10.000 mul 400 exch sub
+      exch sin 10.000 mul 728 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      400 728 10.000 4.000 276 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      400 728 10.000 4.000 276 0 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      52 950 moveto (OM_ActionPointer) show
+      52 967 moveto ( loop=0) show
+      52 984 moveto ( scenario_num=???) show
+      52 1001 moveto ( play_time=-1) show
+      52 1018 moveto ( synchro_time=-1) show
+      52 1035 moveto ( media=#akaoni) show
+      52 1052 moveto ( action=) show
+      52 1069 moveto ( next=null) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      52 952 moveto
+      52 1080 lineto
+      240 1080 lineto
+      240 948 lineto
+      212 948 lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      148 1048 moveto
+      308 1048 lineto
+      308 1140 lineto
+      0 -44 atan dup cos 10.000 mul 264 exch sub
+      exch sin 10.000 mul 1140 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      264 1140 10.000 4.000 -44 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      264 1140 10.000 4.000 -44 0 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      136 934 moveto (/*AP8*/) show
+   grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      472 740 moveto
+      640 740 lineto
+      640 1176 lineto
+      0 -376 atan dup cos 10.000 mul 264 exch sub
+      exch sin 10.000 mul 1176 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      264 1176 10.000 4.000 -376 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      264 1176 10.000 4.000 -376 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      132 1272 moveto
+      912 1272 lineto
+      -560 0 atan dup cos 10.000 mul 912 exch sub
+      exch sin 10.000 mul 712 exch sub lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      912 712 10.000 4.000 0 -560 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      912 712 10.000 4.000 0 -560 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      168 398 moveto (/*AP6*/) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      520 410 moveto (/*AP7*/) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      860 350 moveto (/*AP9*/) show
+   grestore
+
+grestore
+tgifsavedpage restore
+end
+showpage
+
+%%Trailer
+%%BoundingBox: 18 10 577 830
+%MatchingCreationDate: Thu Nov  2 19:02:05 2000
+%%DocumentFonts: Courier
+%%EOF

@@ -1,0 +1,34 @@
+&program;;
+&rule;;
+#main<=stream(#scene);;
+#scene1/[comment=hogehoge] <= #background1(@outbg)/[comment=ÇØ·Ê];
+       	#À¾Ìç(@tojo1)/[comment=À¾Ìç¤ÎÅÐ¾ì];	
+	#²¹Íå(@¤¦¤éÅÐ¾ì)/[comment=²¹Íå¤ÎÅÐ¾ì];
+	#²Ç(@ÅÐ¾ì²Ç)/[comment=²Ç¤ÎÅÐ¾ì];     
+	#¿Í(@ÅÐ¾ìÌç)/[comment=°ìÈÌ¿Í¤ÎÅÐ¾ì];
+	#walk(@sound1);
+	#¿Í(@¤Ò¤È°ÜÆ°)/[comment=°ìÈÌ¿Í¤Î°ÜÆ°];;
+#background1/[type=3, url=file:C:/jdk122/Prog/QUIK/java_quik/viewer/Stage1.class, comment = hogehoge2];;
+#À¾Ìç/[type=3, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/3D/butai.wrl];;
+#²¹Íå/[type=1, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/pic/sit.gif];;
+#²Ç/[type=1, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/pic/sit2.gif];;
+#¿Í/[type=1, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/pic/s.gif];;
+#walk/[type=5, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/sound/walk.wav];;
+
+@outbg/[action_type=1];;
+@tojo1/[action_type=1, point={(0.0, 10.0, 0.0)}, comment=hogehoge3];;
+@sound1/[action_type=1, volume=1.0, point={(0.0,0.0,0.0)}];;
+@sound2/[action_type=1, volume=2.0, point={(10.0,0.0,0.0)}];;
+@sound3/[action_type=1, volume=2.0, point={(-10.0,0.0,0.0)}];;
+@sound4/[action_type=1, volume=1.0, point={(0.0,0.0,10.0)}];;
+@sound5/[action_type=1, volume=1.0, point={(0.0,0.0,-10.0)}];;
+@sound6/[action_type=1, volume=1.0, point={(0.0,10.0,0.0)}];;
+@sound7/[action_type=1, volume=1.0, point={(0.0,-10.0,0.0)}];;
+@¤¦¤éÅÐ¾ì/[action_type=1, point={(-11.0, -2.8, -2.0)}, scale=10.0, comment=²°¾å];;
+@ÅÐ¾ì²Ç/[action_type=1, point={(-5.9, -2.0, -2.0)}, scale=8.4];;
+@ÅÐ¾ìÌç/[action_type=1, point={(5.0, 0.1, 2.0)}, scale=8.0];;
+@¤Ò¤È°ÜÆ°/[action_type=2, point={(0.0, 3.1, 2.0),(0.0, 2.0, 3.0),(-1.0, 1.0, 4.0),
+(-2.0, -2.0, 5.0),(-3.0, -2.0, 6.0),(-4.0, -2.0, 7.0),(-2.0, -2.0, 8.0)}];;
+@¾Ãµî/[action_type=5];;
+&end.
+

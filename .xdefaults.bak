@@ -1,0 +1,36 @@
+!
+! font 
+!
+!*fontSet:	a14,k14,kana14            
+!*fontSet:	-*--18-*,-*--16-*,-*--14-*  
+!*fontSet:	-*--14-*
+*input:		TRUE
+!
+! Mosaic
+!
+Mosaic*homeDocument:    http://www.oka-pu.ac.jp/
+Mosaic*httpProxy:       http://www.oka-pu.ac.jp/
+Mosaic*gopherProxy:     http://www.oka-pu.ac.jp/
+Mosaic*ftpProxy:        http://www.oka-pu.ac.jp/
+Mosaic*waisProxy:       http://www.oka-pu.ac.jp/
+!!!
+!!! Mule
+!!!
+mule*FontSize:		14
+mule*FontSetList:	14,\ 16,\ 20,\ 24
+mule*FontSet-14: \
+	-*-fixed-medium-r-*--14-*-iso8859-1, \
+	-*-fixed-medium-r-*--14-*-jisx0208.1983-*, \
+	-*-fixed-medium-r-*--14-*-jisx0201.1976-*
+mule*FontSet-16: \
+	-*-fixed-medium-r-*--16-*-iso8859-1, \
+	-*-fixed-medium-r-*--16-*-jisx0208.1983-*, \
+	-*-fixed-medium-r-*--16-*-jisx0201.1976-*
+mule*FontSet-20: \
+	-*-fixed-medium-r-*--20-*-iso8859-1, \
+	-*-fixed-medium-r-*--20-*-jisx0208.1983-*, \
+	-*-fixed-medium-r-*--20-*-jisx0201.1976-*
+mule*FontSet-24: \
+	-*-fixed-medium-r-*--24-*-iso8859-1, \
+	-*-fixed-medium-r-*--24-*-jisx0208.1983-*, \
+	-*-fixed-medium-r-*--24-*-jisx0201.1976-*

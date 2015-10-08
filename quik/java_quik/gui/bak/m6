@@ -1,0 +1,14 @@
+&program (m6);;
+&mediator;;
+&ontology;;
+m6:o6 == m1:o1;;
+&subsumption;;
+o5 =< o6;;
+o6 =< o7;;
+o7 =< o5;;
+&rule;;
+o1/[l=Y] <= o2/[l2->Y] || {b==Y};;
+o2/[l2->b];;
+o3/[l3<-X] | {l4==Y,l5>=a};;
+&end.
+

@@ -1,0 +1,65 @@
+&program;;
+&rule;;
+#main<=stream(#scene);;
+#scene1/[comment=hogehoge] <= #background1(@outbg)/[comment=背景];
+	#西門(@tojo1)/[comment=西門の登場];
+	#いさせり(@いさせり登場)/[comment=いさせりの登場];
+	#いさせり(@いさせり移動);;
+#background1/[type=3, url=file:C:/jdk122/Prog/QUIK/java_quik/viewer/Stage1.class, comment = hogehoge2];;
+#西門/[type=3, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/3D/nisi7.wrl];;
+
+#温羅/[type=1, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/pic/ura.gif];;
+#嫁/[type=1, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/pic/ura_yome.gif];;
+#子供/[type=1, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/pic/ura_kodomo.gif];;
+
+#いさせり/[type=1, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/pic/isaseri.gif];;
+#いさせり2/[type=1, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/pic/isaseri_2.gif];;
+#きじ/[type=1, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/pic/kiji.gif];;
+#きじ2/[type=1, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/pic/kiji_2.gif];;
+#猿/[type=1, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/pic/saru.gif];;
+#犬飼/[type=1, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/pic/inukai.gif];;
+#人/[type=1, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/pic/hito_1.gif];;
+#帝/[type=1, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/pic/mikado.gif];;
+
+#walk/[type=5, url=file:C:/jdk122/Prog/QUIK/java_quik/Media/sound/walk.wav];;
+
+@outbg/[action_type=1];;
+@tojo1/[action_type=1, point={(0.0, 10.0, 0.0)}, comment=hogehoge3];;
+
+@うら登場/[action_type=1, point={(-1.0, 6.0, 4.0)}, scale=5.0, comment=屋上];;
+@うら移動/[action_type=2, point={(-1.0, 6.0, 4.0),(-1.0, 7.0, 5.0),(-1.0, 8.0, 5.5),(-1.0, 4.0, 6.0), (-1.0, 3.0, 6.5), (-1.0, 2.0, 7.0), (-1.0, 1.0, 7.5), (-1.0, 0.1, 8.0),(-1.5, -1.0, 9.0)}];;
+@うら移動2/[action_type=2, point={(-1.5, -1.0, 9.0), (-2.0, -1.5, 11.0), (-2.5, -2.0, 13.0),(-2.5, -2.5, 15.0),(-2.5,-3.0,17.0),(-2.5,-3.5,19.0),(-2.5,-4.0,20.0)}];;
+
+@登場門/[action_type=1, point={(0.0, 0.1, 2.0)}, scale=5.0];;
+@門移動/[action_type=2, point={(0.0, 0.0, 0.0),(0.0, 0.0, 20.0)}];;
+@子供登場門/[action_type=1, point={(0.0, 0.1, 2.0)}, scale=4.0];;
+@よめ移動/[action_type=2, point={(0.0, 0.1, 2.0),(0.0, 0.0, 3.0),(-1.0, -0.3, 4.0),(-1.5, -0.6, 5.0),(-2.0, -0.9, 6.0),(-2.5, -1.0, 7.0),(-3.0, -1.0, 8.0),(-3.5,-1.0,9.0)}];;
+@こども移動/[action_type=2, point={(0.0, 0.1, 2.0),(0.0, 0.0, 3.0),(-1.0, -0.3, 4.0),(-1.5, -0.6, 5.0),(-2.0, -0.9, 6.0),(-2.5, -1.0, 7.0),(-3.0, -1.0, 8.0),(-3.5, -1.0, 9.0), (-4.5, -1.0, 9.0)}];;
+@ひと移動/[action_type=2, point={(0.0, 0.1, 2.0),(0.0, 0.0, 3.0),(-1.0, -0.3, 4.0),(-2.0, -0.6, 5.0),(-3.0, -0.9, 6.0),(-4.0, -1.0, 7.0),(-5.0, -1.0, 8.0),(-8.0, -1.0, 9.0)}];;
+
+@いさせり2移動/[action_type=2, point={(-9.0, -4.0, 20.0),(-7.0, -4.0, 20.0), 
+(-5.0, -4.0, 20.0), (-3.0, -4.0, 20.0), (-2.0, -4.0, 20.0), (0.0, -4.0, 20.0)}];;
+@いさせり登場/[action_type=1, point={(-3.0, -4.0, 20.0)}, scale=10.0];;
+@いさせり移動/[action_type=2, point={(-3.0, -4.0, 20.0),(3.0, -4.0, 20.0)}, scale=10.0];;
+@きじ登場/[action_type=1, point={(1.5, -4.0, 20.0)}, scale=5.0];;
+@登場3/[action_type=1, point={(-8.0, -4.0, 20.0)}, scale=5.0];;
+
+@きじ移動/[action_type=2, point={(-8.0, -4.0, 20.0),(-7.0, -4.0, 20.0), 
+(-5.0, -4.0, 20.0), (-3.0, -4.0, 20.0), (0.0, -4.0, 20.0),(1.5, -4.0, 20.0)}];;
+@さる移動/[action_type=2, point={(-8.0, -4.0, 20.0),(-7.0, -4.0, 20.0), 
+(-5.0, -4.0, 20.0), (-3.0, -4.0, 20.0), (0.0, -4.0, 20.0),(2.0, -4.0, 20.0),(3.0, -4.0, 20.0),(3.0, -4.0, 20.0)}];;
+@いぬ移動/[action_type=2, point={(-8.0, -4.0, 20.0),(-7.0, -4.0, 20.0), 
+(-5.0, -4.0, 20.0), (-3.0, -4.0, 20.0), (0.0, -4.0, 20.0),(2.0, -4.0, 20.0),(4.5, -4.0, 20.0)}];;
+
+@みかど登場/[action_type=1, point={(3.0, 6.0, 4.0)}, scale=4.0];;
+
+@sound1/[action_type=1, volume=1.0, point={(0.0,0.0,0.0)}];;
+@sound2/[action_type=1, volume=2.0, point={(10.0,0.0,0.0)}];;
+@sound3/[action_type=1, volume=2.0, point={(-10.0,0.0,0.0)}];;
+@sound4/[action_type=1, volume=1.0, point={(0.0,0.0,10.0)}];;
+@sound5/[action_type=1, volume=1.0, point={(0.0,0.0,-10.0)}];;
+@sound6/[action_type=1, volume=1.0, point={(0.0,10.0,0.0)}];;
+@sound7/[action_type=1, volume=1.0, point={(0.0,-10.0,0.0)}];;
+
+@消去/[action_type=5];;
+&end.

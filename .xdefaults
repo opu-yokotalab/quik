@@ -1,0 +1,55 @@
+!
+! default X resource file for Yokota Lab.
+!
+! $Id: Xdefaults,v 1.3 1998/07/03 04:17:48 kunishi Exp $
+!
+
+!
+! font 
+!
+!*fontSet:	a14,k14,kana14            
+!*fontSet:	-*--18-*,-*--16-*,-*--14-*  
+!*fontSet:	-*--14-*
+*input:		TRUE
+! for X11R5
+*IMProtocol:	kinput
+*ConvSelection:	JAPANESE_CONVERSION
+! for X11R6
+!*inputMethod:	_KINPUT
+!*Modifiers:	@im=_KINPUT
+!*Lang:		ja_JP.EUC
+
+!! kinput2
+Kinput2*conversionEngine:	wnn
+
+!! kterm
+!KTerm*VT100*Translations:	#override \
+!<Key>F11:	open-im(XMODIFIERS)\n\
+!<Key>F12:	close-im()\n
+KTerm*VT100*fontList:	-*-fixed-medium-r-normal--14-*
+KTerm*kanjiMode:	euc
+
+!!!
+!!! Mule
+!!!
+mule*FontSize:		14
+mule*FontSetList:	14,\ 16,\ 20,\ 24
+mule*FontSet-14: \
+	-*-fixed-medium-r-*--14-*-iso8859-1, \
+	-*-fixed-medium-r-*--14-*-jisx0208.1983-*, \
+	-*-fixed-medium-r-*--14-*-jisx0201.1976-*
+mule*FontSet-16: \
+	-*-fixed-medium-r-*--16-*-iso8859-1, \
+	-*-fixed-medium-r-*--16-*-jisx0208.1983-*, \
+	-*-fixed-medium-r-*--16-*-jisx0201.1976-*
+mule*FontSet-20: \
+	-*-fixed-medium-r-*--20-*-iso8859-1, \
+	-*-fixed-medium-r-*--20-*-jisx0208.1983-*, \
+	-*-fixed-medium-r-*--20-*-jisx0201.1976-*
+mule*FontSet-24: \
+	-*-fixed-medium-r-*--24-*-iso8859-1, \
+	-*-fixed-medium-r-*--24-*-jisx0208.1983-*, \
+	-*-fixed-medium-r-*--24-*-jisx0201.1976-*
+
+!! XYoubin
+XYoubin*server:		alpha

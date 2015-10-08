@@ -1,0 +1,114 @@
+# -*- sh -*-
+#
+# $Id: cshrc.sys,v 1.2 1998/07/03 03:59:30 kunishi Exp $
+#
+set Machine=""
+/usr/local/dblab/bin/machine >& /dev/null \\
+    && set Machine=`/usr/local/dblab/bin/machine`
+#mach >& /dev/null && set Machine=`mach`
+
+#
+# Command Search Path
+#
+# default path
+set dpath=(/usr/ucb /bin /usr/bin /usr/new /usr/hosts)
+# local path
+set lpath=(/usr/local/bin \
+	   /usr/local/pbmplus/bin \
+           /usr/local/bin/Wnn4 \
+	   /usr/local/canna/bin \
+	   /usr/local/share/tm)
+# share path
+set spath=(/usr/local/dblab/bin)
+# mh path
+# Note: ordinary mh commands are in /usr/local/bin.
+set mpath=(/usr/local/lib/mh \
+	   /usr/local/metamail/bin)
+# TeX path
+# Note: This is a temporary settings.  In the near future, 
+# all TeX commands will be moved into /usr/local/bin.
+set tpath=(/usr/local/bin/TEX-NTT \
+	   /usr/local/bin/TEX-ASCII \
+	   /usr/local/bin/TEX)
+# X11 path
+set xpath=(/usr/local/X11/bin /usr/openwin/bin \
+           /usr/local/X11R6/bin /usr/local/X11R5/bin /usr/bin/X11 \
+           /usr/local/bin/InterViews)
+# current path
+# CAUTION: For security reasons, current directory should not be added
+# into command path.
+#set cpath=(.)
+set cpath=()
+#
+# Vender dependent path
+#
+if ( $Machine == "sparc" ) then		# SunOS specific paths
+	set vpath=()
+else if ( $Machine == "solaris" ) then	# Solaris specific paths
+	# Note: ZX graphic accelarator is not supported in pure X-window
+	# systems, so you must use Openwindow.
+	set vpath=(/usr/ccs/bin /usr/openwin/bin)
+else if ( $Machine == "sgi" ) then	# IRIX specific paths
+	set vpath=(/usr/bsd /usr/sbin /sbin /usr/bin/Wnn6)
+else
+	set vpath=()
+endif
+
+set path=($tpath $lpath $spath $mpath $vpath $xpath $dpath)
+unset tpath lpath spath mpath vpath xpath dpath epath
+
+#
+# man Path
+#
+# default manpaths
+set dmanpath=/usr/share/man
+# local manpaths
+set lmanpath=/usr/local/man:/usr/local/pbmplus/man:/usr/local/canna/man:
+# share manpaths
+set smanpath=
+# mh manpaths
+set mmanpath=
+# TeX manpaths
+set tmanpath=
+# X11 manpaths
+set xmanpath=/usr/local/X11/man:/usr/openwin/man:/usr/local/X11R6/man:/usr/local/X11R5/man:
+#
+# Vender dependent manpath
+#
+if ( $Machine == "solaris" ) then
+	set vmanpath=/opt/SUNWspro/man:
+else if ($Machine == "sgi") then
+    set vmanpath=/usr/share/catman:
+else
+    set vmanpath=
+endif
+#
+# user specific manpath
+set umanpath=''
+setenv MANPATH "${umanpath}${tmanpath}${lmanpath}${smanpath}${mmanpath}${vmanpath}${xmanpath}${dmanpath}"
+   unset umanpath tmanpath lmanpath smanpath mmanpath vmanpath xmanpath dmanpath
+
+if ($?prompt) then
+    set prompt = "`hostname`{$user}\!: "
+    set notify
+    set ignoreeof
+    set history = 50
+    set savehist = 50
+endif
+
+umask 022 
+
+# Environment variables specific to Yokota Lab.
+setenv DOMAINNAME c.oka-pu.ac.jp
+setenv JSERVER chi
+setenv LESSCHARSET japanese-jis
+setenv MM_CHARSET iso-2022-jp
+setenv NNTPSERVER compub.c.oka-pu.ac.jp
+setenv OPENWINHOME /usr/openwin
+setenv PAGER less
+setenv http_proxy http://iota.c.oka-pu.ac.jp:3128/
+setenv https_proxy http://iota.c.oka-pu.ac.jp:3128/
+setenv ftp_proxy http://iota.c.oka-pu.ac.jp:3128/
+setenv gopher_proxy http://iota.c.oka-pu.ac.jp:3128/
+setenv www_proxy http://iota.c.oka-pu.ac.jp:3128/
+setenv no_proxy oka-pu.ac.jp

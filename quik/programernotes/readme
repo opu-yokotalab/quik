@@ -1,0 +1,11 @@
+このディレクトリはQUIKチームの各人の開発状況を日記みたいに記録記述して頂く
+ために作成しました。
+
+それぞれログインネームに .txt の拡張子をつけたファイルにお願いします。
+
+% \ls
+README          ogata.txt       sugimoto.txt    yokogawa.txt
+nerio.txt       sugihara.txt    tsutsumi.txt
+
+書式は各人にお任せします。
+							1998/10/13 草々

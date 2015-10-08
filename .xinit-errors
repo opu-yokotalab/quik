@@ -1,0 +1,12 @@
+Default Font Path: /usr/openwin/lib/X11/
+X Error of failed request:  BadValue (integer parameter out of range for operation)
+  Major opcode of failed request:  51 (X_SetFontPath)
+  Value in failed request:  0xc
+  Serial number of failed request:  8
+  Current serial number in output stream:  10
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  25 (X_SendEvent)
+  Resource id in failed request:  0x1c00009
+  Serial number of failed request:  568
+  Current serial number in output stream:  569
+

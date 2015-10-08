@@ -1,0 +1,220 @@
+%!
+%%BoundingBox: 18 316 435 809
+%%Title: construction
+%%CreationDate: Wed Nov  1 11:30:03 2000
+%%Creator: Tgif-3.0J.18 by William Chia-Wei Cheng (william@cs.UCLA.edu)
+%%Orientation: Portrait
+%%Pages: 1
+%%DocumentFonts: (atend)
+%%EndComments
+%%BeginProlog
+
+/tgifdict 6 dict def
+tgifdict begin
+
+%%Title: jisfont.ps
+%%Creator: shin@jn1jdz.ymt.prug.or.jp
+%%CreationDate: 1997-7-20
+%%EndComments
+
+% based on eucfont.ps (1991-2-27) by shikida@cs.titech.ac.jp, ueno@cs.titech.ac.jp
+
+% <newfont> <asciifont> <kanjifont> jisfont
+/jisfont {
+    12 dict begin
+	dup type /nametype eq { findfont } if
+	dup /WMode known {
+	    dup /WMode get /WMode exch def
+	    WMode 1 eq {
+		[0.0 1.0 -1.0 0.0 0.0 0.30] makefont
+	    } if
+	} if
+	/kanjifont exch definefont
+	exch
+
+	dup type /nametype eq { findfont } if
+	exch
+
+	/FDepVector [ 4 2 roll ] def
+	/FontType 0 def
+	/FMapType 3 def
+	/FontMatrix matrix def
+	/Encoding [ 0 1 ] def
+	/FontBBox {0 0 0 0} def
+	dup /FontName exch def
+	currentdict
+    end
+    definefont pop
+} def
+
+end
+
+%%EndProlog
+%%Page: 1 1
+
+%%PageBoundingBox: 18 316 435 809
+tgifdict begin
+/tgifsavedpage save def
+
+1 setmiterlimit
+1 setlinewidth
+
+0 setgray
+
+72 0 mul 72 11.70 mul translate
+72 128 div 100.000 mul 100 div dup neg scale
+
+gsave
+
+/tgiforigctm matrix currentmatrix def
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H /Courier /Ryumin-Light-H jisfont
+/Courier-Ryumin-Light-H findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      44 74 moveto (2000\377\001\107\057\105\131\377\000QUIK\377\001\044\116\071\075\112\070\116\143\377\000 10/27) show
+   grestore
+
+% BOX
+0 setgray
+gsave
+   10 setmiterlimit
+   gsave
+      newpath
+         36 96 moveto 772 96 lineto 772 752 lineto 36 752 lineto
+      closepath
+      stroke
+   grestore
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      60 121 moveto (&program\(m1\);;) show
+      60 137 moveto (&mediator;;) show
+      60 153 moveto (&ontology;;) show
+      60 169 moveto (&subsumption;;) show
+      60 185 moveto (&rule;;) show
+      60 201 moveto (/*scene-list*/) show
+      60 217 moveto ( #main <= stream\(#scene\);;) show
+      60 233 moveto ( or) show
+      60 249 moveto ( #main <= #scene1,#scene2;#scene3...;;) show
+      60 265 moveto () show
+      60 281 moveto (/*Leaf-list*/ ) show
+      60 297 moveto ( #scene1/[comment=hogehoge] ) show
+      60 313 moveto (         <= #background\(@outbg\); #momotaro\(@tojo1\),) show
+      60 329 moveto (            #akaoni\(@tojo2\); ) show
+      60 345 moveto (            #monkey\(@tojo3\)/[play_time=30, synchro_time=20, comment=gehogeho];) show
+      60 361 moveto (            #momotaro\(@moveleft\);) show
+      60 377 moveto (            #sentence1\(@teroppu\); #sentence2\(@talk\);) show
+      60 393 moveto (            #akaoni\(@runaway\); #sound\(@music\);;) show
+      60 409 moveto () show
+      60 425 moveto (/*media-list*/) show
+      60 441 moveto ( #backgound/[type=3, url=http://.../haikei.vrml, comment=hogehoge2];;) show
+      60 457 moveto ( #momotaro/[type=1, url=http://.../momotaro.jpg];;) show
+      60 473 moveto ( #akaoni/[type=1, url=http://.../akaoni.jpg];;) show
+      60 489 moveto ( #monkey/[type=2, url=http://.../monkey.mov];;) show
+      60 505 moveto ( #sentence1/[type=4, url=http://.../setumei.txt];;) show
+      60 521 moveto ( #sentence2/[type=4, url=http://.../nanori.txt];;) show
+      60 537 moveto ( #sound/[type=5, url=http://.../taijo.wav];;) show
+      60 553 moveto () show
+      60 569 moveto (/*action-list*/ ) show
+      60 585 moveto ( @outbg/[action_type=1];;) show
+      60 601 moveto ( @tojo1/[action_type=1, point={\(0.5, 1.0, 0.0\)}, comment=hogehoge3];;) show
+      60 617 moveto ( @tojo2/[action_type=1, point={\(-0.5, 1.0, 0.0\)}];;) show
+      60 633 moveto ( @tojo3/[action_type=1, point={\(0.3, 1.0, 0.5\)}];;) show
+      60 649 moveto ( @moveleft/[action_type=2, point={\(0.4, 1.0, 0.0\),) show
+      60 665 moveto (     \(0.2, 1.0, 0.0\), \(0.0, 1.5, 0.0\), \(-0.3, 1.0, 0.0\)];;) show
+      60 681 moveto ( @teroppu/[action_type=1, font=italic, color={r=0.0, g=0.0, b=0.0}];;) show
+      60 697 moveto ( @talk/[action_type=3, font=momotaro, volume=2.0];;) show
+      60 713 moveto ( @runaway/[action_type=5];;) show
+      60 729 moveto ( @music/[action_type=1, volume=1.0];;) show
+      60 745 moveto (&end.) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      44 809 moveto (\377\001\045\141\045\107\045\043\045\042\044\116\045\077\045\044\045\127) show
+      44 825 moveto () show
+      44 841 moveto (1. \377\001\100\105\073\137\062\150) show
+      44 857 moveto (2. \377\001\106\060\062\150) show
+      44 873 moveto (3. 3D\377\001\045\052\045\126\045\070\045\047\045\057\045\110) show
+      44 889 moveto (4. \377\001\045\106\045\055\045\071\045\110) show
+      44 905 moveto (5. \377\001\045\065\045\046\045\163\045\111) show
+      44 921 moveto (6. \377\001\063\060\111\164\045\141\045\107\045\043\045\042) show
+   grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      228 821 moveto (\377\001\045\042\045\057\045\067\045\147\045\163\044\116\045\077\045\044\045\127) show
+      228 837 moveto () show
+      228 853 moveto (1. out) show
+      228 869 moveto (2. move) show
+      228 885 moveto (3. speak) show
+      228 901 moveto (4. light) show
+      228 917 moveto (5. del) show
+   grestore
+
+% BOX
+0 setgray
+gsave
+   10 setmiterlimit
+   gsave
+      newpath
+         36 820 moveto 192 820 lineto 192 932 lineto 36 932 lineto
+      closepath
+      stroke
+   grestore
+grestore
+
+% BOX
+0 setgray
+gsave
+   10 setmiterlimit
+   gsave
+      newpath
+         220 832 moveto 364 832 lineto 364 928 lineto 220 928 lineto
+      closepath
+      stroke
+   grestore
+grestore
+
+% TEXT
+0 setgray
+/Courier-Ryumin-Light-H findfont [14 0 0 -14 0 0] makefont setfont
+   gsave
+      408 841 moveto (\377\001\063\060\111\164\045\141\045\107\045\043\045\042\044\116\045\077\045\044\045\127) show
+      408 857 moveto () show
+      408 873 moveto (1. SMIL) show
+      408 889 moveto (2. TVML) show
+      408 905 moveto (3. JavaProg.) show
+      408 921 moveto (4. ??) show
+   grestore
+
+% BOX
+0 setgray
+gsave
+   10 setmiterlimit
+   gsave
+      newpath
+         396 848 moveto 544 848 lineto 544 928 lineto 396 928 lineto
+      closepath
+      stroke
+   grestore
+grestore
+
+grestore
+tgifsavedpage restore
+end
+showpage
+
+%%Trailer
+%MatchingCreationDate: Wed Nov  1 11:30:03 2000
+%%DocumentFonts: 
+%%EOF

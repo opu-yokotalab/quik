@@ -1,0 +1,804 @@
+options {
+  JAVA_UNICODE_ESCAPE = true;
+  STATIC = false;  
+}
+
+
+PARSER_BEGIN(quik_parser)
+     package java_quik;
+
+     import java_quik.send_om.*;
+     import java.awt.*;
+     import java.lang.*;
+     import java.awt.event.*;
+     import java.io.*;
+     import java.lang.Object.*;
+     import java.lang.*;
+     import java.util.*;
+     
+     public class quik_parser {
+       
+       /* //java.util.Stack argStack = new java.util.Stack();
+       public static void main(String args[]) throws ParseException {
+	 quik_parser parser = new quik_parser(System.in);
+	 parser.Input();
+       }
+       */
+     }
+
+PARSER_END(quik_parser)
+     
+     SKIP :
+{
+  " "
+    | "\t"
+    | "\n"
+    | "\r"
+    }
+
+TOKEN :
+{
+  <LBRACE: "{">
+	     | <RBRACE: "}">
+	     | <Lkakko: "(">
+	     | <Rkakko: ")">
+	     | <sk2: ";;">
+	     | <sk: ";">
+	     | <program: "&program">
+	     | <query: "&query">
+	     | <debug: "&debug">
+	     | <mediator: "&mediator">
+	     | <ontology: "&ontology">
+	     | <subsumption: "&subsumption">
+	     | <rule: "&rule">
+	     | <end: "&end">
+	     | <test: "test1">
+	     | <SHARP: "#">
+	     | <r: "r=">
+	     | <g: "g=">
+	     | <b: "b=">
+	     | <STREAM: "stream">
+	     | <WQUOTE: " \" ">
+ }
+
+TOKEN :
+{
+  < ATOM:( (["a"-"z","A"-"Z","_","\u3000"-"\u9fff"])+(<DIGIT>)*)+>
+	    | < DIGIT: ["-","0"-"9"](["0"-"9","."])*>
+	    | < URL: ("http://"|"file:") (["a"-"z","A"-"Z","0"-"9","_",".","/","~",":"])+> 
+	    }
+
+
+
+
+void Input() :
+{int count;  }
+{
+  program()
+    {
+      System.out.println("ATOM = " +  Extern_h.atom_pool.node.body.media_atom.name);
+      System.out.println("Node = " +  Extern_h.node_pool.next.head.name);
+      System.out.println("Leaf = " +  Extern_h.node_pool.next.body.media_atom.name);
+      System.out.println("Leaf.seq = " +  Extern_h.node_pool.next.body.seq_next.media_atom.name);
+      System.out.println("Leaf.ap = " +  Extern_h.node_pool.next.body.ap.media.media_atom.name + "(" + Extern_h.node_pool.next.body.ap.action.action_atom.name+")" );
+      System.out.println("Media.ap = " +  Extern_h.media_pool.ap.media.media_atom.name);
+
+      /* test  to 実行系*/
+      /*
+      Exec_Start exec = new Exec_Start();
+      exec.exec_process_allocation(Extern_h.atom_pool, 4);
+      exec.exec_process_allocation(Extern_h.atom_pool, 0);
+      exec.exec_process_allocation(Extern_h.atom_pool, 0);
+      exec.exec_process_allocation(Extern_h.atom_pool, 0);
+      exec.exec_process_allocation(Extern_h.atom_pool, 0);
+      exec.exec_process_allocation(Extern_h.atom_pool, 0);
+      exec.exec_process_allocation(Extern_h.atom_pool, 0);
+      exec.exec_process_allocation(Extern_h.atom_pool, 0);
+      exec.exec_process_allocation(Extern_h.atom_pool, 0);
+      exec.exec_process_allocation(Extern_h.atom_pool, 0);
+      exec.exec_process_allocation(Extern_h.atom_pool, 0);
+      exec.exec_process_allocation(Extern_h.atom_pool, 0);
+      exec.exec_process_allocation(Extern_h.atom_pool, 0);
+      exec.exec_process_allocation(Extern_h.atom_pool, 0);
+      exec.exec_process_allocation(Extern_h.atom_pool, 0);
+      exec.exec_process_allocation(Extern_h.atom_pool, 0);
+      */
+    }
+    |
+    query()
+    |
+    debug()<EOF>
+      }
+
+void program() :
+{}
+{
+  <program><sk2>definitionlist()<end>"."
+    {
+      //System.out.println("---------------------------------------------------");
+    }
+}	
+
+void query() :
+{}
+{
+  <query>
+     
+    {}
+}
+
+void debug() :
+{}
+{
+  <debug>
+    {}
+}
+
+void definitionlist() :
+{}
+{
+  
+  //  <mediator><sk2>
+     
+  //     <ontology><sk2> 
+     
+  //     <subsumption><sk2>
+ 
+     <rule><sk2> rulelist()
+    {
+  
+    }
+}
+
+
+void rulelist():
+{}
+{
+  scenelist()
+    
+    leaf_media_action_list()
+
+    //    actionlist()
+    {
+            OM_emit.emit_parent();
+	    OM_emit.emit_action_pointer();
+	    OM_emit.emit_leaf_ap();
+	//    OM_qbj.object_create(0); // 2/10/2001/nerio
+    }
+}
+
+void scenelist():
+{ 
+  T_ConList t_conlist_buf=null;
+  T_LeafList t_leaflist_buf=null;
+  T_Leaf t_leaf_buf=null;  
+}
+{
+  t_leaf_buf=body() "<=" 
+    (<STREAM><Lkakko> t_leaflist_buf=bodylist() <Rkakko> <sk2>
+
+    {
+      t_leaflist_buf.str_stream = "STREAM";
+      
+      OM_emit.emit_node(t_leaf_buf,t_leaflist_buf);
+    }
+
+      |
+
+      t_leaflist_buf=bodylist()<sk2>
+ { 
+
+        // System.out.println(t_leaf_buf.media_atom.name);
+      OM_emit.emit_node(t_leaf_buf,t_leaflist_buf);
+    }
+)
+    
+   
+}
+
+void leaf_media_action_list():
+{
+T_LeafList t_leaflist_buf=null;
+T_Leaf t_leaf_buf=null;  
+T_ConList t_conlist_buf=null;
+}
+{
+  
+ ( t_leaf_buf=body() ( "<="  t_leaflist_buf=bodylist() )? <sk2>//(leaf_media_action_list())?
+    { 
+      
+      
+      if(t_leaflist_buf!=null){ //ボディリスト("<=")があるとき
+	//OM_Nodeの生成
+	
+ 	//System.out.println(t_leaf_buf.media_atom.name);
+	OM_emit.emit_node(t_leaf_buf,t_leaflist_buf);
+      }
+      else{  // 無いとき (メディアの生成)
+	if(t_leaf_buf.media_atom != null)
+	  OM_emit.emit_media(t_leaf_buf);
+	else{
+	  OM_emit.emit_action(t_leaf_buf);
+	  //if(t_leaf_buf.t_ap.t_con.point!=null);
+	  //  System.out.println("action_point"+t_leaf_buf.t_ap.t_con.point.point_x);
+	  
+}    
+  }
+      t_leaflist_buf=null;
+    }
+)+
+
+}
+
+
+
+void  actionlist():
+{
+  T_ConList t_conlist_buf=null;
+  T_Leaf t_leaf_buf=null;
+}
+{
+  "@" t_leaf_buf = body() <sk2> (actionlist())?
+    {
+      /*  
+	  //hash試験運用
+	  //Sytem.out.println("actiolist_name="+t.image);
+	  //Sytem.out.println("hash_test="+t_conlist_buf.con.con_name);
+	  T_Hash t_hash_entry = new T_Hash(); 
+	  
+	  t_hash_entry.test(t.image,t_conlist_buf.con.con_name);
+	  t_hash_entry.out();
+	  //t_hash_entry.find();
+	  */
+      //アクションの生成
+      OM_emit.emit_action(t_leaf_buf);
+    }
+}
+
+
+T_LeafList bodylist():
+{
+  T_Leaf t_leaf=null;
+  T_LeafList t_leaflist=null;  
+}
+{
+  t_leaf=body(){t_leaf.seq_next=0;t_leaf.nonorder=0;}
+   (
+   ";"{t_leaf.seq_next=1;t_leaf.nonorder=0;}
+   
+   | ","{t_leaf.seq_next=0;t_leaf.nonorder=1;}
+ 
+    )? 
+  
+     ( t_leaflist=bodylist())?
+      
+       {
+  
+	 T_LeafList t_leaflist_entry = new T_LeafList(t_leaf,t_leaflist);            
+	 //System.out.println("media_name="+t_leaf.media_atom.name);
+	 //System.out.println("action_name="+t_leaf.action_atom.name);
+	 //System.out.println("seq_next="+t_leaf.seq_next);
+
+      return t_leaflist_entry;
+    }
+ }
+
+
+T_ConList contentslist():
+{
+ String s;
+ T_Con t_con=null;
+ T_ConList t_conlist=null;
+}
+{
+  t_con=contents()("," t_conlist=contentslist())?
+    {
+      
+      T_ConList t_conlist_entry = new T_ConList(t_con,t_conlist);
+      //T_Con t_con_entry = new T_Con();
+      return t_conlist_entry;
+    }
+}
+
+
+T_Leaf body():
+{
+  T_ActionPointer t_ap=null;
+}
+{
+  t_ap = exactbody() 
+    {
+      if(T_ActionPointer.t_ap_pool == null){
+	T_ActionPointer.t_ap_pool = t_ap;
+	T_ActionPointer.t_ap_pool_last = t_ap;
+      }
+      else{
+	T_ActionPointer.t_ap_pool_last.next = t_ap;
+	T_ActionPointer.t_ap_pool_last = t_ap;
+      }
+      T_Leaf t_leaf_entry = new T_Leaf(t_ap);
+      // if(t_leaf_entry!=null)
+      //  System.out.println("action_point"+t_leaf_entry.t_ap.t_con.point.point_x);
+
+      return t_leaf_entry;
+    }
+}
+
+
+T_ActionPointer exactbody():
+{
+ 
+  T_Con t_con_entry=null;
+  T_ConList t_conlist_entry=null;
+  OM_Atom media_atom=null;
+  OM_Atom action_atom=null;
+  T_Con t_con_nece = null;  
+  T_ConList t_conlist_tmp=null;
+  T_ActionPointer exactbody_entry=null;
+  String buf="";
+}
+{
+  <SHARP>media_atom=atom()
+    
+    ( <Lkakko> "@"action_atom=atom() <Rkakko>)?
+    
+    ("/""["t_conlist_entry=contentslist()"]")?
+    
+    {
+
+ //   System.out.println("before1================");
+      
+      //if(t_conlist_entry!=null){
+      //
+      //  if(t_conlist_entry.next!=null){
+      //
+      //       System.out.println(t_conlist_entry.con.con_name);
+      //}
+      //}
+
+
+
+      if(t_conlist_entry != null){
+	t_con_nece = new T_Con();
+	
+	t_conlist_tmp = t_conlist_entry;
+
+	while( t_conlist_tmp != null){
+	  if(t_conlist_tmp.con.con_name.equals("type")){
+	    t_con_nece.media_type = t_conlist_tmp.con.media_type;
+	  }
+	  else if(t_conlist_tmp.con.con_name.equals("font")){
+	    t_con_nece.font = t_conlist_tmp.con.font;
+	  }
+	  else if(t_conlist_tmp.con.con_name.equals("str")){
+	    t_con_nece.str = t_conlist_tmp.con.str;
+	  }
+	  else if(t_conlist_tmp.con.con_name.equals("volume")){
+	    t_con_nece.volume = t_conlist_tmp.con.volume;
+	  }
+	  else if(t_conlist_tmp.con.con_name.equals("url")){
+	    t_con_nece.url = t_conlist_tmp.con.url;
+	  }
+	  else if(t_conlist_tmp.con.con_name.equals("rotation")){
+	    t_con_nece.rotation = t_conlist_tmp.con.rotation;
+	  }
+	  else if(t_conlist_tmp.con.con_name.equals("play_time")){
+	    t_con_nece.play_time = t_conlist_tmp.con.play_time;
+	  }
+	  else if(t_conlist_tmp.con.con_name.equals("synchro_time")){
+	    t_con_nece.synchro_time = t_conlist_tmp.con.synchro_time;
+	  }
+	  else if(t_conlist_tmp.con.con_name.equals("comment")){
+	    t_con_nece.comment = t_conlist_tmp.con.comment;
+	  }
+	  else if(t_conlist_tmp.con.con_name.equals("color")){
+	    t_con_nece.r = t_conlist_tmp.con.r;
+	    t_con_nece.g = t_conlist_tmp.con.g;
+	    t_con_nece.b = t_conlist_tmp.con.b;
+	  }
+	  else if(t_conlist_tmp.con.con_name.equals("export_type")){
+	    t_con_nece.export_type = t_conlist_tmp.con.export_type;
+	  }
+	  else if(t_conlist_tmp.con.con_name.equals("scale")){
+	    t_con_nece.scale = t_conlist_tmp.con.scale;
+	  }
+	  else if(t_conlist_tmp.con.con_name.equals("scale_x")){
+	    t_con_nece.scale_x = t_conlist_tmp.con.scale_x;
+	  }
+	  else if(t_conlist_tmp.con.con_name.equals("scale_y")){
+	    t_con_nece.scale_y = t_conlist_tmp.con.scale_y;
+	  }
+	  else if(t_conlist_tmp.con.con_name.equals("scenario_num")){
+	    t_con_nece.scenario_num = t_conlist_tmp.con.scenario_num;
+	  }
+	  //Sytem.out.println("------------------------------------------");
+	  //Sytem.out.println("t_conlist_tmp.next = " + t_conlist_tmp.next);
+	  t_conlist_tmp = t_conlist_tmp.next;
+	}
+      }
+      
+      //メディアのみ
+      if(action_atom==null && t_con_nece == null){
+	exactbody_entry = new T_ActionPointer(media_atom);
+	//Sytem.out.println("before21================");
+	return exactbody_entry;
+      }
+
+      //media_atom と 属性 のみ
+      else if(action_atom==null && media_atom != null && t_con_nece != null){
+       	exactbody_entry = new T_ActionPointer(media_atom, t_con_nece);
+	////Sytem.out.println("before22================");
+	return exactbody_entry;
+      }
+
+      //media_atomとactin_atom のみ (属性が無い場合)
+      else if(media_atom != null && action_atom != null && t_con_nece == null){
+	exactbody_entry = new T_ActionPointer(media_atom,action_atom);
+	////Sytem.out.println("before23================");      
+	return exactbody_entry;
+      }
+      else
+	{
+	  exactbody_entry = new T_ActionPointer(media_atom,action_atom, t_con_nece );
+	//  System.out.println("before24================");
+	  return exactbody_entry;
+	}
+    }
+  |
+      
+      "@" action_atom = atom() "/""["t_conlist_entry=contentslist()"]"
+	{
+
+
+	    t_con_nece = new T_Con();
+	
+	    t_conlist_tmp = t_conlist_entry;
+    
+	    while( t_conlist_tmp != null){
+	      if(t_conlist_tmp.con.con_name.equals("action_type")){
+		t_con_nece.action_type = t_conlist_tmp.con.action_type;
+	      }
+	      else if(t_conlist_tmp.con.con_name.equals("font")){
+		t_con_nece.font = t_conlist_tmp.con.font;
+	      }
+	      else if(t_conlist_tmp.con.con_name.equals("rotation")){
+		t_con_nece.rotation = t_conlist_tmp.con.rotation;
+	      }
+	      else if(t_conlist_tmp.con.con_name.equals("scale")){
+		t_con_nece.scale = t_conlist_tmp.con.scale;
+	      }
+	      else if(t_conlist_tmp.con.con_name.equals("volume")){
+		t_con_nece.volume = t_conlist_tmp.con.volume;
+	      }
+	      else if(t_conlist_tmp.con.con_name.equals("comment")){
+		t_con_nece.comment = t_conlist_tmp.con.comment;
+	      }
+	      else if(t_conlist_tmp.con.con_name.equals("point")){
+		t_con_nece.point = t_conlist_tmp.con.point;
+		//System.out.println(t_con_nece.point.point_x);
+		//if(t_con_nece.point.next!=null)
+		 // System.out.println(t_con_nece.point.next.point_x);
+	      }
+	      else if(t_conlist_tmp.con.con_name.equals("color")){
+		t_con_nece.r = t_conlist_tmp.con.r;
+		t_con_nece.g = t_conlist_tmp.con.g;
+		t_con_nece.b = t_conlist_tmp.con.b;
+	      }
+	      else if(t_conlist_tmp.con.con_name.equals("intonation")){
+		t_con_nece.intonation = t_conlist_tmp.con.intonation;
+	      }
+	      else if(t_conlist_tmp.con.con_name.equals("pitch")){
+		t_con_nece.pitch = t_conlist_tmp.con.pitch;
+	      }
+	      else if(t_conlist_tmp.con.con_name.equals("speed")){
+		t_con_nece.speed = t_conlist_tmp.con.speed;
+	      }
+	      else if(t_conlist_tmp.con.con_name.equals("brightness")){
+		t_con_nece.brightness = t_conlist_tmp.con.brightness;
+	      }
+	      else if(t_conlist_tmp.con.con_name.equals("steradian")){
+		t_con_nece.steradian = t_conlist_tmp.con.steradian;
+	      }
+	      //Sytem.out.println("------------------------------------------");
+	      //Sytem.out.println("t_conlist_tmp.next = " + t_conlist_tmp.next);
+	      t_conlist_tmp = t_conlist_tmp.next;
+	    }
+	    
+	
+	  exactbody_entry =  T_ActionPointer.make_Action(action_atom, t_con_nece);
+	  return exactbody_entry;
+	}
+}
+
+
+OM_Atom atom():
+{
+  String s=null;
+  Token t;
+}
+{
+  t=<ATOM>
+    {
+      //OM_Atom atom_entry = new OM_Atom(t.image);  
+      //	OM_Atom.atom_pool = atom_entry;
+      OM_Atom atom_entry = OM_Atom.make_ATOM(t.image);  //OM_Atom 生成
+      if(Extern_h.atom_pool == null)
+	Extern_h.atom_pool = atom_entry;
+      //System.out.println("Atom="+atom_entry.name);
+      return atom_entry;
+    }
+}
+
+
+String nonatom():
+{String s=null;
+Token t;           
+}
+{
+  t=<ATOM>
+    {
+      
+      //OM_Atom atom_entry = OM_Atom.make_ATOM(t.image);  //OM_Atom 
+      //Sytem.out.println("nonAtom="+t.image);
+      return t.image;
+    }
+  
+  |
+      t=<DIGIT>
+	{
+	  
+	  //OM_Float float_entry = OM_Float.make_FLOAT(t.image);  //OM_Float 
+	  return t.image;
+	}
+      |
+	  t=<URL>
+	    {
+	      
+	      //OM_Url url_entry = OM_Url.make_URL(t.image);  //OM_URL 
+	      //	      System.out.println("URL="+url_entry.url);
+	      
+	      return t.image;
+	    }
+}               
+
+
+T_Con contents():
+{
+  Token t;
+  String zokusei_buf;
+  String atai_buf="";
+  String r_buf="";
+  String g_buf="";
+  String b_buf="";
+  
+  T_Con t_con_entry = new T_Con();  //T_Con 生成
+  OM_Atom buf_zokusei_atom=null;
+  OM_Atom buf_atai_atom=null;
+  T_Point pointlist = new T_Point();
+}
+{
+  buf_zokusei_atom=atom() "=" (atai_buf=nonatom()
+			       
+			       
+			       | "{" (  pointlist=pointlist() |   <r> r_buf=nonatom() ","<g>g_buf=nonatom()","<b>b_buf=nonatom()           ) "}"      )
+    
+    
+{
+  zokusei_buf=buf_zokusei_atom.name;
+  
+  /*--begin---------T_Conのtype比較----------------------------- */
+  
+  
+  //System.out.println("zokusei="+zokusei_buf);
+  if(zokusei_buf.equals("type")){
+    t_con_entry.con_name = zokusei_buf;
+    t_con_entry.media_type = Integer.parseInt(atai_buf);
+    //Sytem.out.println("T_Con(type)="+t_con_entry.con_name);
+    return  t_con_entry;
+  }
+  
+  else if(zokusei_buf.equals("action_type")){
+    t_con_entry.con_name=zokusei_buf;
+    t_con_entry.action_type = Integer.parseInt(atai_buf);
+    //Sytem.out.println("T_Con(action_type)="+t_con_entry.con_name);
+    return t_con_entry;  
+  }
+  
+  else if(zokusei_buf.equals("export_type")){
+    t_con_entry.con_name=zokusei_buf;
+    t_con_entry.export_type = Integer.parseInt(atai_buf);
+    return t_con_entry;  
+  }
+
+  else if(zokusei_buf.equals("rotation")){
+    t_con_entry.con_name=zokusei_buf;
+    t_con_entry.rotation = atai_buf;
+    return t_con_entry;  
+  }
+
+  else if(zokusei_buf.equals("scale_x")){
+    t_con_entry.con_name=zokusei_buf;
+    t_con_entry.scale_x = Integer.parseInt(atai_buf);
+    return t_con_entry;  
+  }
+  
+  else if(zokusei_buf.equals("scale_y")){
+    t_con_entry.con_name=zokusei_buf;
+    t_con_entry.scale_y = Integer.parseInt(atai_buf);
+    return t_con_entry;  
+  }
+    
+  else if(zokusei_buf.equals("scale")){
+    t_con_entry.con_name=zokusei_buf;
+    t_con_entry.scale = Float.valueOf(atai_buf).floatValue();
+    return t_con_entry;  
+  }
+
+  else if(zokusei_buf.equals("font")){
+    t_con_entry.con_name=zokusei_buf;
+    t_con_entry.font = atai_buf;
+    //Sytem.out.println("T_Con(font)="+t_con_entry.con_name);
+    return  t_con_entry;
+  }
+
+  else if(zokusei_buf.equals("volume")){
+    t_con_entry.con_name=zokusei_buf;
+    t_con_entry.volume = Float.valueOf(atai_buf).floatValue();
+    //Sytem.out.println("T_Con(volume)="+t_con_entry.con_name);
+    return  t_con_entry;
+  }
+  
+  else if(zokusei_buf.equals("url")){
+    t_con_entry.con_name=zokusei_buf;
+    t_con_entry.url = atai_buf;
+    //Sytem.out.println("T_Con(url)="+t_con_entry.con_name);
+    return  t_con_entry;
+  }
+  
+  else if(zokusei_buf.equals("str")){
+    t_con_entry.con_name=zokusei_buf;
+    t_con_entry.str = atai_buf;
+       return  t_con_entry;
+  }
+
+  else if(zokusei_buf.equals("play_time")){
+    t_con_entry.con_name=zokusei_buf;
+    t_con_entry.play_time = Integer.parseInt(atai_buf);
+    //Sytem.out.println("T_Con(play_time)="+t_con_entry.con_name);
+    return t_con_entry;
+  }
+
+
+  else if(zokusei_buf.equals("synchro_time")){
+    t_con_entry.con_name=zokusei_buf;
+    t_con_entry.synchro_time = Integer.parseInt(atai_buf);
+    //Sytem.out.println("T_Con(synchro_time)="+t_con_entry.con_name);
+    return  t_con_entry;
+  }
+  
+  
+  else if(zokusei_buf.equals("comment")){
+    t_con_entry.con_name=zokusei_buf;
+    t_con_entry.comment = atai_buf;
+    //Sytem.out.println("T_Con(comment)="+t_con_entry.con_name);
+    return  t_con_entry;
+  }
+
+  else if(zokusei_buf.equals("point")){
+    t_con_entry.con_name=zokusei_buf;
+    
+    /*  Stack pointliststack = new Stack();
+    while (pointlist != null)//後ろを先頭
+      {
+	pointliststack.push(pointlist);
+	pointlist = pointlist.next;
+      }
+    
+    while(pointliststack.empty()!=true){
+      pointlist=(T_Point)pointliststack.pop();
+
+    }
+    */
+
+
+    t_con_entry.point = pointlist;
+    
+    // System.out.println("T_Con(point)="+t_con_entry.con_name);
+       //   System.out.println(pointlist.point_x);
+    //   System.out.println(pointlist.point_y);
+    //   System.out.println(pointlist.point_z );
+       // if(pointlist.next!=null)
+       //  System.out.println("next"+pointlist.next.point_x);
+    //   System.out.println(pointlist.next.point_y);
+    //   System.out.println(pointlist.next.point_z);
+    return  t_con_entry;
+  }
+
+  else if(zokusei_buf.equals("color")){
+    t_con_entry.con_name=zokusei_buf;
+    t_con_entry.r = Float.valueOf(r_buf).floatValue();
+    t_con_entry.g = Float.valueOf(g_buf).floatValue();
+    t_con_entry.b = Float.valueOf(b_buf).floatValue();
+    
+    return  t_con_entry;
+  }
+
+  else if(zokusei_buf.equals("intonation")){
+    t_con_entry.con_name=zokusei_buf;
+    t_con_entry.intonation = Float.valueOf(atai_buf).floatValue();
+    
+    return  t_con_entry;
+  }
+
+  else if(zokusei_buf.equals("pitch")){
+    t_con_entry.con_name=zokusei_buf;
+    t_con_entry.pitch = Float.valueOf(atai_buf).floatValue();
+    
+    return  t_con_entry;
+  }
+  
+  else if(zokusei_buf.equals("speed")){
+    t_con_entry.con_name=zokusei_buf;
+    t_con_entry.speed = Float.valueOf(atai_buf).floatValue();
+    
+    return  t_con_entry;
+  }
+
+  else if(zokusei_buf.equals("brightness")){
+    t_con_entry.con_name=zokusei_buf;
+    t_con_entry.brightness = Float.valueOf(atai_buf).floatValue();
+
+    return  t_con_entry;
+  }
+
+  else if(zokusei_buf.equals("steradian")){
+    t_con_entry.con_name=zokusei_buf;
+    t_con_entry.steradian = Float.valueOf(atai_buf).floatValue();
+
+    return  t_con_entry;
+  }
+
+  else if(zokusei_buf.equals("scenario_num")){
+    t_con_entry.con_name=zokusei_buf;
+    t_con_entry.scenario_num = Float.valueOf(atai_buf).floatValue();
+                       
+    return  t_con_entry;
+  }
+  /*--end----------T_Conのtype比較-------------------------------*/
+  
+}
+}
+
+T_Point pointlist():
+{
+  
+  Token x=null,y=null,z=null,r,g,b;
+  float x_buf=1.1f;
+  float y_buf=1.1f;
+  float z_buf=1.1f;
+  
+  
+  float r_buf=1.1f;
+  float g_buf=1.1f;
+  float b_buf=1.1f;
+  
+  T_Point next_point=null;
+  String s="";
+  //float x_buf=valueOf(String s);
+}
+{
+  
+  "(" x=<DIGIT> "," y=<DIGIT> "," z=<DIGIT>  ")" ("," next_point=pointlist())?
+    
+    {
+      x_buf=Float.valueOf(x.image).floatValue();
+      y_buf=Float.valueOf(y.image).floatValue();
+      z_buf=Float.valueOf(z.image).floatValue();
+      
+      T_Point t_point_entry = new T_Point(x_buf,y_buf,z_buf);  
+      t_point_entry.next=next_point;
+      return t_point_entry;
+    }
+}
+
+

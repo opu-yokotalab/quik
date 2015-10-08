@@ -1,0 +1,19 @@
+&program (m1);;
+&mediator;;
+&ontology;;
+&subsumption;;
+&rule;;
+#main <= #scene1;;
+#scene1 <= #outM( #background1/*nomiya*/; #speaker1/*manabe*/, #text; #speaker2/*oki*/; #sentence1; #sentence2);#delM( #speaker1 );;
+#background1/[type=3, url=file:///C:/jdk122/Prog/QUIK/java_quik/viewer/Stage1.class];;
+%#background1/[type=3, url=http://alpha.c.oka-pu.ac.jp/~nerio/c.class, play_time=23, synchro_time=9];;
+#speaker1/[type=1, url=file:///C:/jdk122/Prog/QUIK/java_quik/Media/pcchar.jpg, point={(-1.0, 0.0, 0.0)} ];;
+#text/[type=4, str=file:///C:/jdk122/Prog/QUIK/java_quik/Media/text.txt];;
+#sentence1/[type=6,url=file:///C:/jdk122/Prog/QUIK/java_quik/Media/bell.wav];;
+#sentence2/[type=7,str=file:///C:/jdk122/Prog/QUIK/java_quik/Media/text.txt, font=female, pitch=0.4];;
+#speaker2/[type=1, url=file:///C:/jdk122/Prog/QUIK/java_quik/Media/npcchar1.jpg, scale=1.0, point={(1.0, 0.0, 0.0)}];;
+%#speaker2/[type=1,play_time=3,synchro_time=4];;
+&end.
+
+
+

@@ -1,0 +1,28 @@
+古いQUIKの構文は捨てて、新しいマルチメディアの構文に沿ってのみ開発を行う。
+つまり1999年度作成した OM_*.java および T_*.java だけ使用する。
+
+11/20/2000 記.
+Extern_h から OM_* T_* は去年からほとんど変更が加えられている。
+--今年新規作成したもの(名前を変更したものも含む)--
+OM_3D	<- OM_Object
+OM_Action
+OM_ActionPointer
+OM_Action_Type
+OM_Del  (メッセージのみ)
+OM_Light
+OM_Media_Type
+OM_OtherM (サポート未完)
+OM_Out
+OM_Speak   <- OM_Utterance
+OM_qbj  (QUIKオブジェクト"qbj"のトランザクション管理)
+
+T_3D	<- T_Object
+T_ActionPointer
+T_Del
+T_Light
+T_Speak    <- T_Utterance
+
+12/01/2000 記.
+通信系からの要請でクライアント側へ送信するオブジェクトを別のパッケージ
+(package java_quik.send_om;)にし、そのうちのT_*からOM_*への変換を
+すべてOM_emitに移した。

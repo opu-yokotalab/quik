@@ -1,0 +1,96 @@
+%TGIF 3.0J.18
+state(0,33,100.000,0,128,0,4,1,9,1,1,1,0,1,0,1,0,'Courier%Ryumin-Light-H',0,14,0,0,0,10,0,0,1,1,0,17,0,0,1,1,1,0,1056,1497,0,0,2880).
+%
+% @(#)$Header$
+% %W%
+%
+unit("1 pixel/pixel").
+color_info(11,65535,0,[
+	"magenta", 65535, 0, 65535, 65535, 0, 65535, 1,
+	"red", 64250, 4883, 16448, 64000, 4864, 16384, 1,
+	"green", 15163, 64250, 13364, 15104, 64000, 13312, 1,
+	"blue", 20817, 20817, 64507, 20736, 20736, 64256, 1,
+	"yellow", 65535, 65535, 0, 65535, 65535, 0, 1,
+	"pink", 65535, 49344, 52171, 65535, 49344, 52171, 1,
+	"cyan", 0, 65535, 65535, 0, 65535, 65535, 1,
+	"CadetBlue", 24672, 41120, 41120, 24576, 40960, 40960, 1,
+	"white", 65535, 65535, 65535, 65535, 65535, 65535, 1,
+	"black", 0, 0, 0, 0, 0, 0, 1,
+	"DarkSlateGray", 12079, 20303, 20303, 12079, 20303, 20303, 1
+]).
+page(1,"",1).
+text('black',44,60,'Courier%Ryumin-Light-H',0,17,1,0,0,1,242,17,3849,0,14,3,0,0,0,0,0,2,0,0,0,0,"",0,0,0,[
+	"2000年度QUIKの構文例 10/27"]).
+box('black',36,96,772,752,0,1,1,3850,0,0,0,0,0,'1',[
+]).
+text('black',60,108,'Courier%Ryumin-Light-H',0,14,40,0,0,1,702,640,3851,0,13,3,0,0,0,0,0,2,0,0,0,0,"",0,0,0,[
+	"&program(m1);;",
+	"&mediator;;",
+	"&ontology;;",
+	"&subsumption;;",
+	"&rule;;",
+	"/*scene-list*/",
+	" #main <= stream(#scene);;",
+	" or",
+	" #main <= #scene1,#scene2;#scene3...;;",
+	"",
+	"/*Leaf-list*/ ",
+	" #scene1/[comment=hogehoge] ",
+	"         <= #background(@outbg); #momotaro(@tojo1),",
+	"            #akaoni(@tojo2); ",
+	"            #monkey(@tojo3)/[play_time=30, synchro_time=20, comment=gehogeho];",
+	"            #momotaro(@moveleft);",
+	"            #sentence1(@teroppu); #sentence2(@talk);",
+	"            #akaoni(@runaway); #sound(@music);;",
+	"",
+	"/*media-list*/",
+	" #backgound/[type=3, url=http://.../haikei.vrml, comment=hogehoge2];;",
+	" #momotaro/[type=1, url=http://.../momotaro.jpg];;",
+	" #akaoni/[type=1, url=http://.../akaoni.jpg];;",
+	" #monkey/[type=2, url=http://.../monkey.mov];;",
+	" #sentence1/[type=4, url=http://.../setumei.txt];;",
+	" #sentence2/[type=4, url=http://.../nanori.txt];;",
+	" #sound/[type=5, url=http://.../taijo.wav];;",
+	"",
+	"/*action-list*/ ",
+	" @outbg/[action_type=1];;",
+	" @tojo1/[action_type=1, point={(0.5, 1.0, 0.0)}, comment=hogehoge3];;",
+	" @tojo2/[action_type=1, point={(-0.5, 1.0, 0.0)}];;",
+	" @tojo3/[action_type=1, point={(0.3, 1.0, 0.5)}];;",
+	" @moveleft/[action_type=2, point={(0.4, 1.0, 0.0),",
+	"     (0.2, 1.0, 0.0), (0.0, 1.5, 0.0), (-0.3, 1.0, 0.0)];;",
+	" @teroppu/[action_type=1, font=italic, color={r=0.0, g=0.0, b=0.0}];;",
+	" @talk/[action_type=3, font=momotaro, volume=2.0];;",
+	" @runaway/[action_type=5];;",
+	" @music/[action_type=1, volume=1.0];;",
+	"&end."]).
+text('black',44,796,'Courier%Ryumin-Light-H',0,14,8,0,0,1,129,128,3852,0,13,3,0,0,0,0,0,2,0,0,0,0,"",0,0,0,[
+	"メディアのタイプ",
+	"",
+	"1. 静止画",
+	"2. 動画",
+	"3. 3Dオブジェクト",
+	"4. テキスト",
+	"5. サウンド",
+	"6. 外部メディア"]).
+text('black',228,808,'Courier%Ryumin-Light-H',0,14,7,0,0,1,126,112,3853,0,13,3,0,0,0,0,0,2,0,0,0,0,"",0,0,0,[
+	"アクションのタイプ",
+	"",
+	"1. out",
+	"2. move",
+	"3. speak",
+	"4. light",
+	"5. del"]).
+box('black',36,820,192,932,0,1,1,3854,0,0,0,0,0,'1',[
+]).
+box('black',220,832,364,928,0,1,1,3855,0,0,0,0,0,'1',[
+]).
+text('black',408,828,'Courier%Ryumin-Light-H',0,14,6,0,0,1,140,96,3856,0,13,3,0,0,0,0,0,2,0,0,0,0,"",0,0,0,[
+	"外部メディアのタイプ",
+	"",
+	"1. SMIL",
+	"2. TVML",
+	"3. JavaProg.",
+	"4. ??"]).
+box('black',396,848,544,928,0,1,1,3857,0,0,0,0,0,'1',[
+]).

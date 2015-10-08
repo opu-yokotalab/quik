@@ -1,0 +1,343 @@
+---OM_Node---#main
+---Node.body--
+---OM_Leaf--#scene1
+leaf_flag = false
+weight = 0.0
+---OM_Leaf--#scene2
+leaf_flag = false
+weight = 0.0
+---OM_Node---#scene1
+---Node.body--
+---OM_Leaf--#background(@outbg)
+leaf_flag = false
+weight = 0.0
+---OM_ActionPointer---#background(@outbg)
+loop = 0
+comment = null
+scenario_num = 0.0
+play_time = 0
+--------OM_Media = #background
+media_type = 3
+media_time = -1.0
+comment = hogehoge2
+OM_3D.url = http://haikei.vrml
+OM_3D.rotation = null
+-------------------------------------------
+--------OM_Action = @outbg
+action_type = 1
+comment = null
+OM_Out.point(x,y,z) = (0.0,0.0,0.0)
+OM_Out.font = null
+OM_Out.color(r,g,b) = (1.0,1.0,1.0)
+OM_Out.scale = 0.5
+OM_Out.volume = 0.5
+-------------------------------------------
+---OM_Leaf--#ももたろう(@tojo1)
+leaf_flag = false
+weight = 0.0
+---OM_ActionPointer---#ももたろう(@tojo1)
+loop = 0
+comment = null
+scenario_num = 0.0
+play_time = 0
+--------OM_Media = #ももたろう
+media_type = 1
+media_time = -1.0
+comment = null
+OM_Picture.url = http://momotaro.jpg
+OM_Picture.scale = 0.5
+-------------------------------------------
+--------OM_Action = @tojo1
+action_type = 1
+comment = hogehoge3
+OM_Out.point(x,y,z) = (0.5,1.0,0.0)
+OM_Out.font = null
+OM_Out.color(r,g,b) = (1.0,1.0,1.0)
+OM_Out.scale = 0.5
+OM_Out.volume = 0.5
+-------------------------------------------
+---OM_ActionPointer---#ももたろう(@moveleft)
+loop = 0
+comment = null
+scenario_num = 0.0
+play_time = 0
+--------OM_Media = #ももたろう
+media_type = 1
+media_time = -1.0
+comment = null
+OM_Picture.url = http://momotaro.jpg
+OM_Picture.scale = 0.5
+-------------------------------------------
+--------OM_Action = @moveleft
+action_type = 2
+comment = null
+OM_Move.point(x,y,z) = (0.4,1.0,0.0)
+OM_Move.point(x,y,z) = (0.2,1.0,0.0)
+OM_Move.point(x,y,z) = (0.0,1.5,0.0)
+OM_Move.point(x,y,z) = (0.3,1.0,0.0)
+OM_Move.rotation = null
+-------------------------------------------
+---OM_Leaf--#akaoni(@tojo2)
+leaf_flag = false
+weight = 0.0
+---OM_ActionPointer---#akaoni(@tojo2)
+loop = 0
+comment = null
+scenario_num = 0.0
+play_time = 0
+--------OM_Media = #akaoni
+media_type = 1
+media_time = -1.0
+comment = null
+OM_Picture.url = http://akaoni.jpg
+OM_Picture.scale = 0.5
+-------------------------------------------
+--------OM_Action = @tojo2
+action_type = 1
+comment = null
+OM_Out.point(x,y,z) = (0.5,1.0,0.0)
+OM_Out.font = null
+OM_Out.color(r,g,b) = (1.0,1.0,1.0)
+OM_Out.scale = 0.5
+OM_Out.volume = 0.5
+-------------------------------------------
+---OM_ActionPointer---#akaoni(@runaway)
+loop = 0
+comment = null
+scenario_num = 0.0
+play_time = 0
+--------OM_Media = #akaoni
+media_type = 1
+media_time = -1.0
+comment = null
+OM_Picture.url = http://akaoni.jpg
+OM_Picture.scale = 0.5
+-------------------------------------------
+--------OM_Action = @runaway
+action_type = 5
+comment = null
+-------------------------------------------
+---OM_Leaf--#monkey(@tojo3)
+leaf_flag = false
+weight = 0.0
+---OM_ActionPointer---#monkey(@tojo3)
+loop = 0
+comment = null
+scenario_num = 0.0
+play_time = 30
+--------OM_Media = #monkey
+media_type = 2
+media_time = -1.0
+comment = null
+OM_Picture.url = http://monkey.mov
+OM_Picture.scale = 0.5
+-------------------------------------------
+--------OM_Action = @tojo3
+action_type = 1
+comment = null
+OM_Out.point(x,y,z) = (0.3,1.0,0.5)
+OM_Out.font = null
+OM_Out.color(r,g,b) = (1.0,1.0,1.0)
+OM_Out.scale = 0.5
+OM_Out.volume = 0.5
+-------------------------------------------
+---Node.parent--
+---OM_Leaf--#scene1
+leaf_flag = false
+weight = 0.0
+---OM_Leaf--#scene2
+leaf_flag = false
+weight = 0.0
+---OM_Node---#scene2
+---Node.body--
+---OM_Leaf--#ももたろう(@moveleft)
+leaf_flag = false
+weight = 0.0
+---OM_ActionPointer---#ももたろう(@moveleft)
+loop = 0
+comment = null
+scenario_num = 0.0
+play_time = 0
+--------OM_Media = #ももたろう
+media_type = 1
+media_time = -1.0
+comment = null
+OM_Picture.url = http://momotaro.jpg
+OM_Picture.scale = 0.5
+-------------------------------------------
+--------OM_Action = @moveleft
+action_type = 2
+comment = null
+OM_Move.point(x,y,z) = (0.4,1.0,0.0)
+OM_Move.point(x,y,z) = (0.2,1.0,0.0)
+OM_Move.point(x,y,z) = (0.0,1.5,0.0)
+OM_Move.point(x,y,z) = (0.3,1.0,0.0)
+OM_Move.rotation = null
+-------------------------------------------
+---OM_Leaf--#sentence1(@teroppu)
+leaf_flag = false
+weight = 0.0
+---OM_ActionPointer---#sentence1(@teroppu)
+loop = 0
+comment = null
+scenario_num = 0.0
+play_time = 0
+--------OM_Media = #sentence1
+media_type = 4
+media_time = -1.0
+comment = null
+OM_Text.url = http://setumei.txt
+OM_Text.font = null
+OM_Text.str = null
+OM_Text.scale = 0.5
+OM_Text.color(r,g,b) = (1.0,1.0,1.0)
+-------------------------------------------
+--------OM_Action = @teroppu
+action_type = 1
+comment = null
+OM_Out.point(x,y,z) = (0.0,0.0,0.0)
+OM_Out.font = italic
+OM_Out.color(r,g,b) = (0.0,0.0,0.0)
+OM_Out.scale = 0.5
+OM_Out.volume = 0.5
+-------------------------------------------
+---OM_Leaf--#sentence2(@talk)
+leaf_flag = false
+weight = 0.0
+---OM_ActionPointer---#sentence2(@talk)
+loop = 0
+comment = null
+scenario_num = 0.0
+play_time = 0
+--------OM_Media = #sentence2
+media_type = 4
+media_time = -1.0
+comment = null
+OM_Text.url = http://nanori.txt
+OM_Text.font = null
+OM_Text.str = null
+OM_Text.scale = 0.5
+OM_Text.color(r,g,b) = (1.0,1.0,1.0)
+-------------------------------------------
+--------OM_Action = @talk
+action_type = 3
+comment = null
+OM_Speak.font = male
+OM_Speak.intonation = 0.5
+OM_Speak.pitch = 0.5
+OM_Speak.volume = 2.0
+OM_Speak.speed = 0.0
+-------------------------------------------
+---OM_Leaf--#akaoni(@runaway)
+leaf_flag = false
+weight = 0.0
+---OM_ActionPointer---#akaoni(@runaway)
+loop = 0
+comment = null
+scenario_num = 0.0
+play_time = 0
+--------OM_Media = #akaoni
+media_type = 1
+media_time = -1.0
+comment = null
+OM_Picture.url = http://akaoni.jpg
+OM_Picture.scale = 0.5
+-------------------------------------------
+--------OM_Action = @runaway
+action_type = 5
+comment = null
+-------------------------------------------
+---OM_Leaf--#sound(@music)
+leaf_flag = false
+weight = 0.0
+---OM_ActionPointer---#sound(@music)
+loop = 0
+comment = null
+scenario_num = 0.0
+play_time = 0
+--------OM_Media = #sound
+media_type = 5
+media_time = -1.0
+comment = null
+OM_Sound.url = http://taijo.wav
+OM_Sound.volume = 0.5
+-------------------------------------------
+--------OM_Action = @music
+action_type = 1
+comment = null
+OM_Out.point(x,y,z) = (0.0,0.0,0.0)
+OM_Out.font = null
+OM_Out.color(r,g,b) = (1.0,1.0,1.0)
+OM_Out.scale = 0.5
+OM_Out.volume = 1.0
+-------------------------------------------
+---Node.parent--
+---OM_Leaf--#scene2
+leaf_flag = false
+weight = 0.0
+exec_order_decision!!
+scene1> exec_order_decision!!
+background> #background@outbg(3.1/true)
+exec_order_decision!!
+scene1> exec_order_decision!!
+ももたろう> #ももたろう@tojo1(1.1/true)
+exec_order_decision!!
+scene1> exec_order_decision!!
+akaoni> #akaoni@tojo2(1.1/true)
+exec_order_decision!!
+scene1> exec_order_decision!!
+monkey> #monkey@tojo3(2.1/true)
+exec_order_decision!!
+scene2> exec_order_decision!!
+ももたろう> #ももたろう@moveleft(1.2/true)
+exec_order_decision!!
+scene2> exec_order_decision!!
+sentence1> #sentence1@teroppu(4.1/true)
+exec_order_decision!!
+scene2> exec_order_decision!!
+sentence2> #sentence2@talk(4.3/true)
+exec_order_decision!!
+scene2> exec_order_decision!!
+akaoni> #akaoni@runaway(1.5/true)
+exec_order_decision!!
+scene2> exec_order_decision!!
+sound> #sound@music(5.1/true)
+exec_order_decision!!
+Finish!
+exec_order_decision!!
+Finish!
+exec_order_decision!!
+Finish!
+exec_order_decision!!
+Finish!
+exec_order_decision!!
+Finish!
+exec_order_decision!!
+Finish!
+exec_order_decision!!
+Finish!
+/* scene-list */
+#main <= #scene1; #scene2;;
+#scene1 <= #background(@outbg); #ももたろう(@tojo1), #akaoni(@tojo2); #monkey(@tojo3);;
+#scene2 <= #ももたろう(@moveleft); #sentence1(@teroppu); #sentence2(@talk); #akaoni(@runaway); #sound(@music);;
+
+/* media_list */
+#background/[media_type=3, comment=hogehoge2, url=http://haikei.vrml, rotation=null ];;
+#ももたろう/[media_type=1, comment=null, url=http://momotaro.jpg, scale=0.5 ];;
+#akaoni/[media_type=1, comment=null, url=http://akaoni.jpg, scale=0.5 ];;
+#monkey/[media_type=2, comment=null, url=http://monkey.mov, scale=0.5 ];;
+#sentence1/[media_type=4, comment=null, url=http://setumei.txt, font=null, scale=0.5, str=null, color={r=1.0, g=1.0, b=1.0} ];;
+#sentence2/[media_type=4, comment=null, url=http://nanori.txt, font=null, scale=0.5, str=null, color={r=1.0, g=1.0, b=1.0} ];;
+#sound/[media_type=5, comment=null, url=http://taijo.wav, volume=0.5 ];;
+
+/* action_list */
+@outbg/[action_type=1, comment=null, point={(0.0, 0.0, 0.0)}, font=null, color={r=1.0, g=1.0, b=1.0}, volume=0.5, scale=0.5 ];;
+@tojo1/[action_type=1, comment=hogehoge3, point={(0.5, 1.0, 0.0)}, font=null, color={r=1.0, g=1.0, b=1.0}, volume=0.5, scale=0.5 ];;
+@tojo2/[action_type=1, comment=null, point={(0.5, 1.0, 0.0)}, font=null, color={r=1.0, g=1.0, b=1.0}, volume=0.5, scale=0.5 ];;
+@tojo3/[action_type=1, comment=null, point={(0.3, 1.0, 0.5)}, font=null, color={r=1.0, g=1.0, b=1.0}, volume=0.5, scale=0.5 ];;
+@moveleft/[action_type=2, comment=null, point={(0.4, 1.0, 0.0), (0.2, 1.0, 0.0), (0.0, 1.5, 0.0), (0.3, 1.0, 0.0)}, rotation=null ];;
+@teroppu/[action_type=1, comment=null, point={(0.0, 0.0, 0.0)}, font=italic, color={r=0.0, g=0.0, b=0.0}, volume=0.5, scale=0.5 ];;
+@talk/[action_type=3, comment=null, font=male, intonation=0.5, pitch=0.5, volume=2.0, speed=0.0 ];;
+@runaway/[action_type=5, comment=null ];;
+@music/[action_type=1, comment=null, point={(0.0, 0.0, 0.0)}, font=null, color={r=1.0, g=1.0, b=1.0}, volume=1.0, scale=0.5 ];;
+

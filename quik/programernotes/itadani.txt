@@ -1,0 +1,11 @@
+javaccのDocs.class  JavaCC1_1.classをとってきて展開。
+ ドキュメントのドキュメントを読むとJavaCC1_1.classのsamplesディレクトリの
+SimpleExamplesを英語の説明をみながら勉強。ついでに SimpleCalculatorsも勉強。
+あと、なんか Lookahead  も大事そうだったので勉強した。  後JJTreeExamples も
+みろとドキュメントにはかいてあったけどよくわからなかった。
+
+というわけでなんとなくjavaccがわかったので、quikの構文を動かせるように
+がんばってみる。
+
+
+

@@ -1,0 +1,11 @@
+# from
+# Mediator name \t ATP location \t LocalFile location
+m1	atp://alpha:9001/	file:/project/quik/Quik/java_quik/m_sample.quik
+m2	atp://alpha:9001/	file:/project/quik/Quik/java_quik/test.quik
+m3	atp://pearl:9001/	file:/project/quik/Quik/java_quik/commgr/sample3.dat
+m4	atp://sapphire:9001/	file:/project/quik/Quik/java_quik/mt.quik
+m5	atp://sapphire:9001/	file:/project/quik/Quik/java_quik/mt5.quik
+m6	atp://alpha:9001/	file:/project/quik/Quik/java_quik/test2.quik
+m7	atp://sapphire:9001/	file:/project/quik/Quik/java_quik/mt4.quik
+m9	atp://sapphire:9001/	file:/project/quik/Quik/java_quik/mt.quik
+m10	atp://alpha:9001/	file:/project/quik/Quik/java_quik/sample.quik
